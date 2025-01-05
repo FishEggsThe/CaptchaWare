@@ -1,17 +1,16 @@
 {
   "$GMObject":"",
-  "%Name":"Obj_Debug",
+  "%Name":"Obj_ButtonManager",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":64,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"Obj_Debug",
+  "name":"Obj_ButtonManager",
   "overriddenProperties":[],
   "parent":{
-    "name":"Main Gameplay Screen",
-    "path":"folders/Objects/Main Gameplay Screen.yy",
+    "name":"Common Objects",
+    "path":"folders/Objects/Common Objects.yy",
   },
   "parentObjectId":null,
   "persistent":false,

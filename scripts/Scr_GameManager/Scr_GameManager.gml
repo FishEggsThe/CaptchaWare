@@ -13,14 +13,14 @@ function CreateMicrogameList(_microgames) {
 		microgames[i] = _microGames[i];
 }
 
-var create, win;
+var create, win, gameLayer = "Game_Instances";
 global.migrogameList = [];
 
 //
 create = function() {
-	
+	instance_create_layer(room_width/2, room_height/2, gameLayer, Obj_Checkbox);
 };
 win = function() {
-	
+	return Obj_Checkbox.checked;
 };
 global.migrogameList[0] = new microgame(create, win);

@@ -6,8 +6,8 @@
   "name":"Obj_Control",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"Main Gameplay Screen",
+    "path":"folders/Objects/Main Gameplay Screen.yy",
   },
   "parentObjectId":null,
   "persistent":false,
