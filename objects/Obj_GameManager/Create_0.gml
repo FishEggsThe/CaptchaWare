@@ -18,10 +18,12 @@ gameOver = false;
 breakTimer = 0;
 setBreakTimer = 120;
 
+showControls = false;
+
 gameTimer = 0;
 gameWonTimer = 120;
 
-timeline_index = Tl_BreakTimeline;
+timeline_index = Tl_Startup//Tl_BreakTime;
 timeline_running = true;
 
 // This part is dedicated to initializing states
@@ -39,39 +41,34 @@ gameState = function() {
 		with Obj_CaptchaScreen { lerpToSize = minSize; }
 		timeline_position = 0;
 		timeline_running = true;
+		
+		timeline_index = gameWon ? Tl_Won : Tl_Lost;
 		state = gameWon ? winGameState : loseGameState;
 	}
 		
 }
 // The time right before a microgame is to be played
 breakState = function() {
-	if timeline_position > timeline_max_moment(timeline_index) {
-		with Obj_CaptchaScreen { lerpToSize = maxSize; }
-		gameTimer = selectMicrogame.time;
-		timeline_running = false;
-		gameWon = false;
-		state = gameState;
-	}
+	//if timeline_position > timeline_max_moment(timeline_index) {}
 }
 // The game over screen
-lostState = function() {
+gameOverState = function() {
+	
 }
 // Right after a microgame is won
 winGameState = function() {
-	playerScore++;
-	state = breakState;
+	//if timeline_position > timeline_max_moment(timeline_index) {}
 }
 // Right after a microgame is lost
 loseGameState = function() {
-	playerLives--;
-	//var noLives = playerLives <= 0;
-	if playerLives <= 0 {	
-		state = lostState;
-		gameOver = true;
-		timeline_running = false;
-	} else {
+	//if timeline_position > timeline_max_moment(timeline_index) {}
+}
+startupState = function() {
+	if timeline_position > timeline_max_moment(timeline_index) {
+		timeline_position = 0;
+		timeline_index = Tl_BreakTime;
 		state = breakState;
 	}
 }
 
-state = breakState;
+state = startupState;

@@ -1,6 +1,5 @@
 !! Current Objectives:
 * Set timeline for win state and loss state
-* Show if mouse or keyboard are used for the microgame
 
 Future Objectives:
 * Up to three microgame difficulties
@@ -12,7 +11,8 @@ Future Objectives:
 Hard Maybe Objectives:
 * Save scores online through server
 
-Finished Objectives:
+Finished Objectives (Latest to Earliest):
 * Show player lives
-* Set up transition to and from microgame
+* Show player lives
 * Set up loading and unloading of microgames
+* Set up transition to and from microgame

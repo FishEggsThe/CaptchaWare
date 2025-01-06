@@ -28,5 +28,5 @@ win = function() {
 		return Obj_Checkbox.checked;
 	return false;
 };
-time = 300; popupText = "Check the Box"; controls = [1, 0];
+time = 300; popupText = "Check the Box"; controls = [true, false];
 global.migrogameList[0] = new microgame(create, win, time, popupText, controls);
