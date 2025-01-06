@@ -2,7 +2,8 @@ if CheckIfDuplicate() { exit; }
 if !instance_exists(Obj_CaptchaScreen)
 	instance_create_layer(room_width/2, room_height/2, "Instances", Obj_CaptchaScreen);
 
-microgames = CreateMicrogameList(global.migrogameList);
+microgames = [];
+CreateMicrogameList(global.migrogameList);
 microgamesSize = array_length(global.migrogameList);
 selectMicrogame = noone;
 
@@ -16,7 +17,7 @@ breakTimer = setBreakTimer;
 gameTimer = 0;
 gameWonTimer = 120;
 
-timeline_index = Tl_breakTimeline;
+timeline_index = Tl_BreakTimeline;
 timeline_running = true;
 
 state = noone;

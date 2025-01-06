@@ -2,6 +2,7 @@ function microgame(_createGame, _winCondition, _time) constructor {
 	createGame = _createGame;
 	winCondition = _winCondition;
 	time = _time;
+	//popupText = _popupText;
 }
 
 function CreateMicrogameList(_microgames) {
@@ -14,12 +15,12 @@ function CreateMicrogameList(_microgames) {
 }
 
 // Setup all microgames
-var create, win, gameLayer = "Game_Instances";
+var create, win;
 global.migrogameList = [];
 
 //
 create = function() {
-	instance_create_layer(room_width/2, room_height/2, gameLayer, Obj_Checkbox);
+	instance_create_layer(room_width/2, room_height/2, "Game_Instances", Obj_Checkbox);
 };
 win = function() {
 	if instance_exists(Obj_Checkbox)

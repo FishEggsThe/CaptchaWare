@@ -7,4 +7,5 @@ var gm = Obj_GameManager,
 	
 DrawDebugText(["Game Timer: " + string(gm.gameTimer),
 				"Break Timer: " + string(gm.timeline_position),
-				"Size (to lerp to): " + string(cs.lerpToSize)]);
+				"Size (to lerp to): " + string(cs.lerpToSize),
+				"Microgame Time: " + string(gm.selectMicrogame.time)]);
