@@ -1,0 +1,3 @@
+Current Objectives:
+* Set up transition to and from microgame
+* Set up loading and unloading of microgames

@@ -37,6 +37,7 @@
   },
   "name":"CaptchaWare",
   "resources":[
+    {"id":{"name":"WhatToDo","path":"notes/WhatToDo/WhatToDo.yy",},},
     {"id":{"name":"Obj_Button","path":"objects/Obj_Button/Obj_Button.yy",},},
     {"id":{"name":"Obj_ButtonManager","path":"objects/Obj_ButtonManager/Obj_ButtonManager.yy",},},
     {"id":{"name":"Obj_CaptchaScreen","path":"objects/Obj_CaptchaScreen/Obj_CaptchaScreen.yy",},},
