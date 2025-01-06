@@ -51,6 +51,7 @@
     {"id":{"name":"Spr_Button","path":"sprites/Spr_Button/Spr_Button.yy",},},
     {"id":{"name":"Spr_CaptchaScreen","path":"sprites/Spr_CaptchaScreen/Spr_CaptchaScreen.yy",},},
     {"id":{"name":"Spr_Checkmark","path":"sprites/Spr_Checkmark/Spr_Checkmark.yy",},},
+    {"id":{"name":"Tl_breakTimeline","path":"timelines/Tl_breakTimeline/Tl_breakTimeline.yy",},},
   ],
   "resourceType":"GMProject",
   "resourceVersion":"2.0",

@@ -1,3 +1,5 @@
+if CheckIfDuplicate() { exit; }
+
 sprite = Spr_CaptchaScreen;
 backgroundColor = #99AABB;
 

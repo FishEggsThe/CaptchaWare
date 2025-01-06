@@ -6,5 +6,5 @@ var gm = Obj_GameManager,
 	cs = Obj_CaptchaScreen;
 	
 DrawDebugText(["Game Timer: " + string(gm.gameTimer),
-				"Break Timer: " + string(gm.breakTimer),
+				"Break Timer: " + string(gm.timeline_position),
 				"Size (to lerp to): " + string(cs.lerpToSize)]);
