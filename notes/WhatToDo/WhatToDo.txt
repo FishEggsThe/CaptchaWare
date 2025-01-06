@@ -1,7 +1,18 @@
-Current Objectives:
-* Check for if microgame is won
+!! Current Objectives:
 * Set timeline for win state and loss state
+* Show if mouse or keyboard are used for the microgame
+
+Future Objectives:
+* Up to three microgame difficulties
+* Set game speed
+* Break time animations
+* High score list
+* Transition with shader to make Captcha screen transparent
+
+Hard Maybe Objectives:
+* Save scores online through server
 
 Finished Objectives:
+* Show player lives
 * Set up transition to and from microgame
 * Set up loading and unloading of microgames

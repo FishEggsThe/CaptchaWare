@@ -8,4 +8,6 @@ var gm = Obj_GameManager,
 DrawDebugText(["Game Timer: " + string(gm.gameTimer),
 				"Break Timer: " + string(gm.timeline_position),
 				"Size (to lerp to): " + string(cs.lerpToSize),
-				"Game Won: " + string(gm.gameWon)]);
+				"Game Won: " + string(gm.gameWon),
+				"Lives: " + string(gm.playerLives),
+				"Score: " + string(gm.playerScore)]);
