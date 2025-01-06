@@ -1,3 +1,0 @@
-with Obj_GameManager {
-	
-}

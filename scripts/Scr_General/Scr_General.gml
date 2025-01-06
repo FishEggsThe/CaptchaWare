@@ -19,7 +19,7 @@ function CheckIfDuplicate(_instance = id) {
 
 // Below is the debug stuff
 function DrawDebugText(_strings) {
-	var i, margin = 5, incTextLayer = 25, layers = array_length(_strings);
+	var i, margin = 5, incTextLayer = 20, layers = array_length(_strings);
 	draw_set_halign(fa_left); draw_set_valign(fa_top); draw_set_color(c_black);
 
 	for(i = 0; i < layers; i++;)

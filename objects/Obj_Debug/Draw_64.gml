@@ -10,4 +10,5 @@ DrawDebugText(["Game Timer: " + string(gm.gameTimer),
 				"Size (to lerp to): " + string(cs.lerpToSize),
 				"Game Won: " + string(gm.gameWon),
 				"Lives: " + string(gm.playerLives),
-				"Score: " + string(gm.playerScore)]);
+				"Score: " + string(gm.playerScore),
+				"Timeline Currently Running: " + string(gm.timeline_running)]);

@@ -1,16 +1,16 @@
 {
   "$GMObject":"",
-  "%Name":"Obj_Checkbox",
+  "%Name":"Obj_TileDisappear",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"Obj_Checkbox",
+  "name":"Obj_TileDisappear",
   "overriddenProperties":[],
   "parent":{
-    "name":"01 - Check the Box",
-    "path":"folders/Objects/Common Objects/01 - Check the Box.yy",
+    "name":"02 - Pick All Buses",
+    "path":"folders/Objects/Common Objects/02 - Pick All Buses.yy",
   },
   "parentObjectId":{
     "name":"Obj_Button",

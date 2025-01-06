@@ -1,9 +1,9 @@
 !! Current Objectives:
-* Set timeline for win state and loss state
-
-Future Objectives:
+* Make a new Microgame
 * Up to three microgame difficulties
 * Set game speed
+
+Future Objectives:
 * Break time animations
 * High score list
 * Transition with shader to make Captcha screen transparent
@@ -12,6 +12,7 @@ Hard Maybe Objectives:
 * Save scores online through server
 
 Finished Objectives (Latest to Earliest):
+* Set timeline for win state and loss state
 * Show player lives
 * Show player lives
 * Set up loading and unloading of microgames
