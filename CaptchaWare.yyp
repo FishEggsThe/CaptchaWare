@@ -48,6 +48,7 @@
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"id":{"name":"Scr_GameManager","path":"scripts/Scr_GameManager/Scr_GameManager.yy",},},
     {"id":{"name":"Scr_General","path":"scripts/Scr_General/Scr_General.yy",},},
+    {"id":{"name":"chives","path":"sprites/chives/chives.yy",},},
     {"id":{"name":"Spr_Button","path":"sprites/Spr_Button/Spr_Button.yy",},},
     {"id":{"name":"Spr_CaptchaScreen","path":"sprites/Spr_CaptchaScreen/Spr_CaptchaScreen.yy",},},
     {"id":{"name":"Spr_Checkmark","path":"sprites/Spr_Checkmark/Spr_Checkmark.yy",},},
