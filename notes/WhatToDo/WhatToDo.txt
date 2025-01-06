@@ -1,3 +1,7 @@
 Current Objectives:
+* Check for if microgame is won
+* Set timeline for win state and loss state
+
+Finished Objectives:
 * Set up transition to and from microgame
 * Set up loading and unloading of microgames

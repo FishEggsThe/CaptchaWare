@@ -1,4 +1,4 @@
 if CheckIfDuplicate() { exit; }
-debug = false;
+debug = true;
 textLayer = 0;
 incrementTextLayer = 30;

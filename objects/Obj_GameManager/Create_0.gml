@@ -10,6 +10,7 @@ selectMicrogame = noone;
 playerLives = 4;
 gameSpeed = 1;
 currRound = 0;
+gameWon = false;
 
 setBreakTimer = 120;
 breakTimer = setBreakTimer;
@@ -22,24 +23,35 @@ timeline_running = true;
 
 state = noone;
 gameState = function() {
-	if gameTimer > 0
+	if gameTimer > 0 {
+		var win = selectMicrogame.winCondition()
+		gameWon = win;
+		if (win && gameTimer > gameWonTimer) {
+			gameTimer = gameWonTimer;
+		}
 		gameTimer--;
-	else {
+	} else {
 		with Obj_CaptchaScreen { lerpToSize = minSize; }
 		breakTimer = setBreakTimer
 		timeline_position = 0;
 		timeline_running = true;
-		state = breakState;
+		state = gameWon ? winGameState : loseGameState;
 	}
 		
 }
 breakState = function() {
 	if timeline_position > timeline_max_moment(timeline_index) {
 		with Obj_CaptchaScreen { lerpToSize = maxSize; }
-		gameTimer = 120;
+		gameTimer = selectMicrogame.time;
 		timeline_running = false;
 		state = gameState;
 	}
+}
+winGameState = function() {
+	state = breakState;
+}
+loseGameState = function() {
+	state = breakState;
 }
 
 state = breakState;
