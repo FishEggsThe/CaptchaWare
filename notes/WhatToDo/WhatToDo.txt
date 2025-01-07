@@ -1,19 +1,23 @@
 !! Current Objectives:
-* Make a new Microgame
-* Up to three microgame difficulties
+* Increment difficulty every number of rounds
 * Set game speed
+* Refine how a microgame is selected
 
 Future Objectives:
 * Break time animations
 * High score list
 * Transition with shader to make Captcha screen transparent
+* Make game more appealing to look at
+* Hide rabbit
 
 Hard Maybe Objectives:
 * Save scores online through server
 
 Finished Objectives (Latest to Earliest):
+* Up to three microgame difficulties
 * Set timeline for win state and loss state
 * Show player lives
 * Show player lives
 * Set up loading and unloading of microgames
 * Set up transition to and from microgame
+* Make a new Microgame

@@ -7,6 +7,12 @@ CreateMicrogameList(global.migrogameList);
 microgamesSize = array_length(global.migrogameList);
 selectMicrogame = noone;
 
+holdSize = 1;
+holdList = array_create(holdSize, -1);
+availableIndexes = array_create_ext(microgamesSize-holdSize-1, function(_index) {return _index;});
+pickIndex = -1;
+
+difficulty = 2;
 playerLives = 4;
 gameSpeed = 1;
 currRound = 0;
@@ -28,6 +34,7 @@ timeline_running = true;
 
 // This part is dedicated to initializing states
 state = noone;
+currentState = "";
 // While a microgame is being played
 gameState = function() {
 	if gameTimer > 0 {
@@ -45,23 +52,28 @@ gameState = function() {
 		timeline_index = gameWon ? Tl_Won : Tl_Lost;
 		state = gameWon ? winGameState : loseGameState;
 	}
+	currentState = "Game";
 		
 }
 // The time right before a microgame is to be played
 breakState = function() {
 	//if timeline_position > timeline_max_moment(timeline_index) {}
+	currentState = "Break";
 }
 // The game over screen
 gameOverState = function() {
+	currentState = "Game Over";
 	
 }
 // Right after a microgame is won
 winGameState = function() {
 	//if timeline_position > timeline_max_moment(timeline_index) {}
+	currentState = "Won Game";
 }
 // Right after a microgame is lost
 loseGameState = function() {
 	//if timeline_position > timeline_max_moment(timeline_index) {}
+	currentState = "Lost Game";
 }
 startupState = function() {
 	if timeline_position > timeline_max_moment(timeline_index) {
@@ -69,6 +81,7 @@ startupState = function() {
 		timeline_index = Tl_BreakTime;
 		state = breakState;
 	}
+	currentState = "Startup";
 }
 
 state = startupState;

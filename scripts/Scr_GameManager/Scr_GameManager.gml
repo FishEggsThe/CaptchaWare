@@ -20,24 +20,27 @@ var create, win, time, popupText, controls, index = 0;
 global.migrogameList = [];
 
 // Click the Checkbox
-create = function() {
-	instance_create_layer(room_width/2, room_height/2, "Game_Instances", Obj_Checkbox);
+create = function(_difficulty) {
+	var xPos = room_width/2 + random_range(-128, 128)*_difficulty, 
+		yPos = room_height/2 + random_range(-96, 96)*_difficulty,
+		checkbox = instance_create_layer(xPos, yPos, "Game_Instances", Obj_Checkbox);
+	checkbox.size = 2/(_difficulty+1);
 };
 win = function() {
 	if instance_exists(Obj_Checkbox)
 		return Obj_Checkbox.checked;
 	return false;
 };
-time = 300; popupText = "Check the Box"; controls = [true, false];
+time = 240; popupText = "Check the Box"; controls = [true, false];
 global.migrogameList[index] = new microgame(create, win, time, popupText, controls); index++;
 
 // Pick all Buses
-create = function() {
+create = function(_difficulty) {
 	// Laying out tiles
 	// I hate whenever I have to do this
-	var dims = 3, margin = 1.1, width = sprite_get_width(Spr_Button),
+	var dims = 3+_difficulty, margin = 1.1, width = sprite_get_width(Spr_Button),
 		xOrigin = room_width/2-width*dims/2, yOrigin = room_height/2-width*dims/2, 
-		i, j, xPos, yPos, xMargin, yMargin;
+		i, j, xPos, yPos;
 	for(i = 0; i < dims; i++) {
 		for(j = 0; j < dims; j++) {
 			xPos = xOrigin+64*j*margin; yPos = yOrigin+64*i*margin;
@@ -46,7 +49,7 @@ create = function() {
 	}
 	// Picking which tiles to be problem tiles
 	var indexList = array_create_ext(dims*dims, function(_index) {return _index;});
-	repeat(3) {
+	repeat(dims) {
 		var listPick = irandom(array_length(indexList)-1),
 			randI = indexList[listPick], 
 			tile = instance_find(Obj_TileDisappear, randI);
