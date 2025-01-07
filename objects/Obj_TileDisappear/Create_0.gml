@@ -1,17 +1,27 @@
 event_inherited();
+isBus = false;
+maxRerolls = 0;
+
 color = c_white;
-checked = false;
 checkmarkSprite = Spr_Checkmark;
 
 notHovering = function() {
-	color = c_white;
+	lerpToSize = 1;
+};
+
+hover = function() {
+	lerpToSize = 1.2;
 };
 
 check = function() {
-	if !checked { color = c_gray; }
+	lerpToSize = 0.7;
+	
 };
 
 checkReleased = function() {
-	checked = true;
-	color = c_white;
+	if maxRerolls < 1
+		isBus = choose(true, false);
+	else
+		isBus = false;
+	maxRerolls--;
 };

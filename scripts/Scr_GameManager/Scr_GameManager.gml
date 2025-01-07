@@ -16,7 +16,7 @@ function CreateMicrogameList(_microgames) {
 }
 
 // Setup all microgames
-var create, win, time, popupText, controls;
+var create, win, time, popupText, controls, index = 0;
 global.migrogameList = [];
 
 // Click the Checkbox
@@ -29,4 +29,34 @@ win = function() {
 	return false;
 };
 time = 300; popupText = "Check the Box"; controls = [true, false];
-global.migrogameList[0] = new microgame(create, win, time, popupText, controls);
+global.migrogameList[index] = new microgame(create, win, time, popupText, controls); index++;
+
+// Pick all Buses
+create = function() {
+	// Laying out tiles
+	var dims = 3, xOrigin = room_width/2-64*dims/2, yOrigin = room_height/2-64*dims/2, i, j;
+	for(i = 0; i < dims; i++) {
+		for(j = 0; j < dims; j++) {
+			instance_create_layer(xOrigin+64*j, yOrigin+64*i, "Game_Instances", Obj_TileDisappear);
+		}
+	}
+	// Picking which tiles to be problem tiles
+	var indexList = array_create_ext(dims*dims, function(_index) {return _index;});
+	repeat(3) {
+		var listPick = irandom(array_length(indexList)-1),
+			randI = indexList[listPick], 
+			tile = instance_find(Obj_TileDisappear, randI);
+		tile.isBus = true;
+		tile.maxRerolls = choose(1, 2);
+		array_delete(indexList, listPick, 1);
+	}
+};
+win = function() {
+	if instance_exists(Obj_TileDisappear) {
+		with Obj_TileDisappear { if isBus { return false; } }
+		return true;
+	}
+	return false;
+};
+time = 300; popupText = "Pick all Buses"; controls = [true, false];
+global.migrogameList[index] = new microgame(create, win, time, popupText, controls); index++;
