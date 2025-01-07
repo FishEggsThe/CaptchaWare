@@ -8,8 +8,8 @@
   ],
   "name":"Tl_Won",
   "parent":{
-    "name":"Timelines",
-    "path":"folders/Timelines.yy",
+    "name":"Transitions",
+    "path":"folders/Timelines/Transitions.yy",
   },
   "resourceType":"GMTimeline",
   "resourceVersion":"2.0",

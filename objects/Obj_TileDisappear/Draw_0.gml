@@ -1,4 +1,6 @@
-DrawSprite(sprite, 0, x, y, size, size, 0, color);
+var getSize = size;
+
+DrawSprite(sprite, 0, x, y, getSize, getSize, 0, color);
 
 var drawSprite = isBus ? chives : Spr_Checkmark;
-DrawSprite(drawSprite, 0, x, y, size, size, 0, c_white);
+DrawSprite(drawSprite, 0, x, y, getSize, getSize, 0, c_white);

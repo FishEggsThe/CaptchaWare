@@ -34,10 +34,14 @@ global.migrogameList[index] = new microgame(create, win, time, popupText, contro
 // Pick all Buses
 create = function() {
 	// Laying out tiles
-	var dims = 3, xOrigin = room_width/2-64*dims/2, yOrigin = room_height/2-64*dims/2, i, j;
+	// I hate whenever I have to do this
+	var dims = 3, margin = 1.1, width = sprite_get_width(Spr_Button),
+		xOrigin = room_width/2-width*dims/2, yOrigin = room_height/2-width*dims/2, 
+		i, j, xPos, yPos, xMargin, yMargin;
 	for(i = 0; i < dims; i++) {
 		for(j = 0; j < dims; j++) {
-			instance_create_layer(xOrigin+64*j, yOrigin+64*i, "Game_Instances", Obj_TileDisappear);
+			xPos = xOrigin+64*j*margin; yPos = yOrigin+64*i*margin;
+			instance_create_layer(xPos, yPos, "Game_Instances", Obj_TileDisappear);
 		}
 	}
 	// Picking which tiles to be problem tiles

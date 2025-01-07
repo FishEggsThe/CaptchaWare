@@ -19,9 +19,10 @@ check = function() {
 };
 
 checkReleased = function() {
-	if maxRerolls < 1
-		isBus = choose(true, false);
-	else
-		isBus = false;
 	maxRerolls--;
+	mask_index = noone;
+	doSwap = true;
+	isBus = maxRerolls > 0;
+	doSwap = true;
+	swap = true;
 };
