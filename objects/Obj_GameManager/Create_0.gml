@@ -49,7 +49,7 @@ gameState = function() {
 		timeline_position = 0;
 		timeline_running = true;
 		
-		timeline_index = gameWon ? Tl_Won : Tl_Lost;
+		timeline_index = Tl_GameResults;
 		state = gameWon ? winGameState : loseGameState;
 	}
 	currentState = "Game";
