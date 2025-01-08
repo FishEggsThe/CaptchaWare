@@ -23,3 +23,10 @@ if isDigit
 else if isLetter
 	input = string_insert(chr(key+shiftCheck), input, inputSize+1);
 inputSize++;
+
+if insertionPointTimer > 0 {
+	insertionPointTimer -= global.gameSpeed;
+} else {
+	insertionPointTimer = setInsertionPointTimer
+	insertPoint = !insertPoint;
+}
