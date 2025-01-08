@@ -1,9 +1,4 @@
-// Making sure you can't click a button before the game starts
-if instance_exists(Obj_GameManager) {
-	with Obj_GameManager {
-		if !(state == gameState || state == gameOverState) { exit; }
-	}
-}
+if !CheckIfCanInteract() { exit; }
 
 // Checking if a button exists and is being touched
 if instance_number(Obj_Button) <= 0 { exit; }

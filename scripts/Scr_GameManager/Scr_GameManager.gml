@@ -15,6 +15,15 @@ function CreateMicrogameList(_microgames) {
 		Obj_GameManager.microgames[i] = _microgames[i];
 }
 
+function CheckIfCanInteract() {
+	if instance_exists(Obj_GameManager) {
+		with Obj_GameManager {
+			if !(state == gameState || state == gameOverState) { return false; }
+		}
+	}
+	return true;
+}
+
 global.gameSpeed = 1;
 function SetGameSpeed(_speed) {
 	global.gameSpeed = _speed;
@@ -79,10 +88,14 @@ global.migrogameList[index] = new microgame(create, win, time, popupText, contro
 
 // Type the Prompt
 create = function(_difficulty) {
-	
+	//160, 256
+	instance_create_layer(160, 256, "Game_Instances", Obj_TypePrompt);
 };
 win = function() {
-	
+	if instance_exists(Obj_TypePrompt) {
+		with Obj_TypePrompt { if input == prompt { return true; } }
+	}
+	return false;
 };
 time = 240; popupText = "Type the Prompt"; controls = [false, true];
 global.migrogameList[index] = new microgame(create, win, time, popupText, controls); index++;
