@@ -15,6 +15,15 @@ function CreateMicrogameList(_microgames) {
 		Obj_GameManager.microgames[i] = _microgames[i];
 }
 
+global.gameSpeed = 1;
+function SetGameSpeed(_speed) {
+	global.gameSpeed = _speed;
+	Obj_GameManager.timeline_speed = _speed;
+}
+function ResetGameSpeed() {
+	SetGameSpeed(1);
+}
+
 // Setup all microgames
 var create, win, time, popupText, controls, index = 0;
 global.migrogameList = [];

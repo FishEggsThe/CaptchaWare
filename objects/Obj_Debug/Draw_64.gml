@@ -13,4 +13,4 @@ DrawDebugText(["Game Timer: " + string(gm.gameTimer),
 				"Score: " + string(gm.playerScore),
 				"Timeline Currently Running: " + string(gm.timeline_running),
 				"State: " + string(gm.currentState),
-				"State: " + string(gm.state == gm.gameState)]);
+				"Game Speed: " + string(global.gameSpeed)]);

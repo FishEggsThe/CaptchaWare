@@ -1,9 +1,10 @@
 !! Current Objectives:
-* Increment difficulty every number of rounds
 * Set game speed
-* Refine how a microgame is selected
+* Increment difficulty every number of rounds
+* More microgames
 
 Future Objectives:
+* Refine how a microgame is selected
 * Break time animations
 * High score list
 * Transition with shader to make Captcha screen transparent

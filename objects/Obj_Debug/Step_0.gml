@@ -7,9 +7,7 @@ if keyboard_check_pressed(vk_enter) {
 
 if !debug { exit; }
 
-with Obj_CaptchaScreen {
-	for(var i = 1; i <= 2; i++) {
-		if keyboard_check_pressed(ord(string(i)))
-			lerpToSize = i;
-	}
+for(var i = 0; i = 3; i++) {
+	if keyboard_check_pressed(ord(string(i)))
+		SetGameSpeed(1 + 0.5*i);
 }

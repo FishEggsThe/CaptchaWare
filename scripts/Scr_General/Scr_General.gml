@@ -6,9 +6,24 @@ function DrawSprite(_sprite, _subimg, _x, _y, _xscale=1, _yscale=1, _rot=0, _col
 	draw_sprite_ext(_sprite, _subimg, _x, _y, _xscale, _yscale, _rot, _col, _alpha);
 }
 
-function MoveObject(_obj, _x, _y) {
-	_obj.x += _x;
-	_obj.y += _y;
+function DrawText(_x, _y, _string, _halign, _valign, _color, _xscale=1, _yscale=1, _angle=0, _alpha=1) {
+	draw_set_halign(_halign); draw_set_valign(_valign);
+	draw_text_transformed_color(_x, _y, _string, _xscale, _yscale, _angle, 
+								_color, _color, _color, _color, _alpha);
+}
+
+// Standardizing game speed across any kind of movement
+function MoveObjectGameSpeed(_obj, _x, _y) {
+	_obj.x += _x * global.gameSpeed;
+	_obj.y += _y * global.gameSpeed;
+}
+
+function LerpToGameSpeed(_start, _end, _lerpValue) {
+	return lerp(_start, _end, _lerpValue * global.gameSpeed);
+	
+	//var lerpTo = _end - _start;
+	//lerpTo *= _lerpValue * global.gameSpeed;
+	//return lerpTo + _start;
 }
 
 // if CheckIfDuplicate() { exit; }

@@ -12,9 +12,9 @@ holdList = array_create(holdSize, -1);
 availableIndexes = array_create_ext(microgamesSize-holdSize-1, function(_index) {return _index;});
 pickIndex = -1;
 
-difficulty = 2;
+difficulty = 0;
 playerLives = 4;
-gameSpeed = 1;
+//gameSpeed = 1;
 currRound = 0;
 playerScore = 0;
 gameWon = false;

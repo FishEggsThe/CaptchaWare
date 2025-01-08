@@ -1,1 +1,1 @@
-size = lerp(size, lerpToSize, 0.3);
+size = LerpToGameSpeed(size, lerpToSize, 0.3);
