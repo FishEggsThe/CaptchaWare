@@ -99,3 +99,13 @@ win = function() {
 };
 time = 240; popupText = "Type the Prompt"; controls = [false, true];
 global.migrogameList[index] = new microgame(create, win, time, popupText, controls); index++;
+
+// Microgame Template
+//create = function(_difficulty) {
+	
+//};
+//win = function() {
+	
+//};
+//time = 300; popupText = ""; controls = [true, false];
+//global.migrogameList[index] = new microgame(create, win, time, popupText, controls); index++;
