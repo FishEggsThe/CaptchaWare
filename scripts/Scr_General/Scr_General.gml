@@ -6,7 +6,7 @@ function DrawSprite(_sprite, _subimg, _x, _y, _xscale=1, _yscale=1, _rot=0, _col
 	draw_sprite_ext(_sprite, _subimg, _x, _y, _xscale, _yscale, _rot, _col, _alpha);
 }
 
-function DrawText(_x, _y, _string, _halign, _valign, _color, _xscale=1, _yscale=1, _angle=0, _alpha=1) {
+function DrawText(_x, _y, _string, _halign, _valign, _color=c_black, _xscale=1, _yscale=1, _angle=0, _alpha=1) {
 	draw_set_halign(_halign); draw_set_valign(_valign);
 	draw_text_transformed_color(_x, _y, _string, _xscale, _yscale, _angle, 
 								_color, _color, _color, _color, _alpha);

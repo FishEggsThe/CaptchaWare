@@ -76,3 +76,13 @@ win = function() {
 };
 time = 300; popupText = "Pick all Buses"; controls = [true, false];
 global.migrogameList[index] = new microgame(create, win, time, popupText, controls); index++;
+
+// Type the Prompt
+create = function(_difficulty) {
+	
+};
+win = function() {
+	
+};
+time = 240; popupText = "Type the Prompt"; controls = [false, true];
+global.migrogameList[index] = new microgame(create, win, time, popupText, controls); index++;

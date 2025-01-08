@@ -1,5 +1,5 @@
 !! Current Objectives:
-* Set game speed
+* Type prompt microgame
 * Increment difficulty every number of rounds
 * More microgames
 
@@ -9,12 +9,14 @@ Future Objectives:
 * High score list
 * Transition with shader to make Captcha screen transparent
 * Make game more appealing to look at
+* Add distortion to type prompt microgame
 * Hide rabbit
 
 Hard Maybe Objectives:
 * Save scores online through server
 
 Finished Objectives (Latest to Earliest):
+* Set game speed
 * Up to three microgame difficulties
 * Set timeline for win state and loss state
 * Show player lives
