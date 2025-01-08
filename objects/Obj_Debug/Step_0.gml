@@ -7,7 +7,7 @@ if keyboard_check_pressed(vk_enter) {
 
 if !debug { exit; }
 
-for(var i = 0; i = 3; i++) {
+for(var i = 1; i <= 3; i++) {
 	if keyboard_check_pressed(ord(string(i)))
-		SetGameSpeed(1 + 0.5*i);
+		SetGameSpeed(1 + (i-1)*0.5);
 }
