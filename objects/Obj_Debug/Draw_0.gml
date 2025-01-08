@@ -1,3 +1,3 @@
-with Obj_TextInput {
-	DrawText(x, y, chr(keyboard_lastkey), fa_right, fa_bottom, c_black, 2, 2);
+with Obj_TypePrompt {
+	DrawText(x, y, ">"+prompt, fa_right, fa_bottom, c_black, 2, 2);
 }

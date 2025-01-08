@@ -1,4 +1,4 @@
-input = "lol";
+input = "";
 inputSize = string_length(input);
 placeholder = "Start typing babygirl";
 height = 40;

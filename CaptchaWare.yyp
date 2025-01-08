@@ -50,6 +50,7 @@
     {"id":{"name":"Obj_GameManager","path":"objects/Obj_GameManager/Obj_GameManager.yy",},},
     {"id":{"name":"Obj_TextInput","path":"objects/Obj_TextInput/Obj_TextInput.yy",},},
     {"id":{"name":"Obj_TileDisappear","path":"objects/Obj_TileDisappear/Obj_TileDisappear.yy",},},
+    {"id":{"name":"Obj_TypePrompt","path":"objects/Obj_TypePrompt/Obj_TypePrompt.yy",},},
     {"id":{"name":"Rm_Game","path":"rooms/Rm_Game/Rm_Game.yy",},},
     {"id":{"name":"Rm_Test","path":"rooms/Rm_Test/Rm_Test.yy",},},
     {"id":{"name":"Scr_GameManager","path":"scripts/Scr_GameManager/Scr_GameManager.yy",},},
