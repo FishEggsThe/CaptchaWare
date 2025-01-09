@@ -64,6 +64,7 @@
     {"id":{"name":"Spr_Button","path":"sprites/Spr_Button/Spr_Button.yy",},},
     {"id":{"name":"Spr_CaptchaScreen","path":"sprites/Spr_CaptchaScreen/Spr_CaptchaScreen.yy",},},
     {"id":{"name":"Spr_Checkmark","path":"sprites/Spr_Checkmark/Spr_Checkmark.yy",},},
+    {"id":{"name":"Spr_Secret","path":"sprites/Spr_Secret/Spr_Secret.yy",},},
     {"id":{"name":"Tl_BreakTime","path":"timelines/Tl_BreakTime/Tl_BreakTime.yy",},},
     {"id":{"name":"Tl_GameResults","path":"timelines/Tl_GameResults/Tl_GameResults.yy",},},
     {"id":{"name":"Tl_LevelUp","path":"timelines/Tl_LevelUp/Tl_LevelUp.yy",},},

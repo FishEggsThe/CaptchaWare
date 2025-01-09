@@ -7,7 +7,6 @@ with Obj_GameManager {
 		timeline_running = false;
 		timeline_index = Tl_Startup;
 	} else if (currRound % 12 == 0 && difficulty < 3) {
-		//difficulty++;
 		timeline_index = Tl_LevelUp;
 		state = levelUpState;
 	} else {

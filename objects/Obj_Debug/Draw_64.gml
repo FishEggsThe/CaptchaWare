@@ -26,5 +26,6 @@ if instance_exists(Obj_Control) {
 	array_push(debugLog, "Player Name: " + string(ct.playerName));
 }
 array_push(debugLog, "Game Speed: " + string(global.gameSpeed));
+array_push(debugLog, "No. of Button Managers: " + string(instance_number(Obj_ButtonManager)));
 
 DrawDebugText(debugLog);

@@ -16,10 +16,8 @@ check = function() {
 };
 
 checkPressed = function() {
-	if Obj_InputName.input != ""
+	if Obj_InputName.input != "" {
 		Obj_Control.playerName = Obj_InputName.input;
-};
-
-checkReleased = function() {
-	
+		room_goto(Rm_Game);
+	}
 };

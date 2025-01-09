@@ -1,7 +1,7 @@
 !! Current Objectives:
+* Buttons and functionality for game over screen to retry or go back to name entry
 * More microgames
 * Add a camera
-* Main menu to type out username for leaderboards
 * Smooth slide transition from main menu to game screen
 
 Future Objectives:
@@ -17,6 +17,7 @@ Hard Maybe Objectives:
 * Save scores online through server
 
 Finished Objectives (Latest to Earliest):
+* Main menu to type out username for leaderboards
 * Increment difficulty every number of rounds
 * Type prompt microgame
 * Set game speed

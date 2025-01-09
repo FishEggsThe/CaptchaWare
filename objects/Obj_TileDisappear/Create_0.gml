@@ -20,8 +20,5 @@ check = function() {
 checkReleased = function() {
 	maxRerolls--;
 	mask_index = noone;
-	doSwap = true;
 	isBus = maxRerolls > 0;
-	doSwap = true;
-	swap = true;
 };

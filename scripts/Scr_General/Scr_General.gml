@@ -28,7 +28,7 @@ function LerpToGameSpeed(_start, _end, _lerpValue) {
 
 // if CheckIfDuplicate() { exit; }
 function CheckIfDuplicate(_instance = id) {
-	if instance_number(_instance) > 1 { instance_destroy(_instance); return true; }
+	if instance_number(_instance.object_index) > 1 { instance_destroy(_instance); return true; }
 	return false;
 }
 
