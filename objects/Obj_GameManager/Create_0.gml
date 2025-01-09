@@ -75,6 +75,11 @@ loseGameState = function() {
 	//if timeline_position > timeline_max_moment(timeline_index) {}
 	currentState = "Lost Game";
 }
+// When the difficulty goes up
+levelUpState = function() {
+	//if timeline_position > timeline_max_moment(timeline_index) {}
+	currentState = "Level Up";
+}
 startupState = function() {
 	if timeline_position > timeline_max_moment(timeline_index) {
 		timeline_position = 0;

@@ -10,7 +10,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"03 - Type the Prompt",
-    "path":"folders/Objects/Common Objects/03 - Type the Prompt.yy",
+    "path":"folders/Objects/Microgame Objects/03 - Type the Prompt.yy",
   },
   "parentObjectId":{
     "name":"Obj_TextInput",

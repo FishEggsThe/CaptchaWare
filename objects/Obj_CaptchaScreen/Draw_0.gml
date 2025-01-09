@@ -13,7 +13,7 @@ for(i = 0; i < 2; i++) {
 	DrawSprite(chives, 0, room_width-96, 160+64*i, 1, 1, 0, color, alpha);
 }
 
-DrawText(room_width, room_height-30, "Score: "+string(gm.difficulty), fa_right, fa_bottom, c_black, 2, 2, 0, alpha);
+DrawText(room_width, room_height-60, "Difficulty: "+string(gm.difficulty), fa_right, fa_bottom, c_black, 2, 2, 0, alpha);
 DrawText(room_width, room_height-30, "Score: "+string(gm.playerScore), fa_right, fa_bottom, c_black, 2, 2, 0, alpha);
 DrawText(room_width, room_height,    "Round: "+string(gm.currRound), fa_right, fa_bottom, c_black, 2, 2, 0, alpha);
 

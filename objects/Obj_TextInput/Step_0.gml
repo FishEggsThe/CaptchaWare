@@ -16,6 +16,9 @@ if key == vk_backspace && inputSize > 0 {
 	inputSize--; exit; 
 }
 
+// Checking if the character limit is reached
+if inputSize >= inputSizeMax { exit; }
+
 // Between 0 and 9 inclusive
 isDigit = key >= 48 && key <= 57;
 // Between A & Z

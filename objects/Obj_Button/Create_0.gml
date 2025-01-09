@@ -5,6 +5,8 @@ if !instance_exists(Obj_ButtonManager) {
 size = 1;
 lerpToSize = 1;
 
+color = c_white;
+
 sprite = sprite_index;
 mask_index = sprite;
 

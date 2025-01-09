@@ -10,7 +10,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"01 - Check the Box",
-    "path":"folders/Objects/Common Objects/01 - Check the Box.yy",
+    "path":"folders/Objects/Microgame Objects/01 - Check the Box.yy",
   },
   "parentObjectId":{
     "name":"Obj_Button",

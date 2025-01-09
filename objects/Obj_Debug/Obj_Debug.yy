@@ -11,8 +11,8 @@
   "name":"Obj_Debug",
   "overriddenProperties":[],
   "parent":{
-    "name":"Main Gameplay Screen",
-    "path":"folders/Objects/Main Gameplay Screen.yy",
+    "name":"Gameplay Objects",
+    "path":"folders/Objects/Gameplay Objects.yy",
   },
   "parentObjectId":null,
   "persistent":false,

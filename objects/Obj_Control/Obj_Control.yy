@@ -1,13 +1,15 @@
 {
   "$GMObject":"",
   "%Name":"Obj_Control",
-  "eventList":[],
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
   "name":"Obj_Control",
   "overriddenProperties":[],
   "parent":{
-    "name":"Main Gameplay Screen",
-    "path":"folders/Objects/Main Gameplay Screen.yy",
+    "name":"Menu Objects",
+    "path":"folders/Objects/Menu Objects.yy",
   },
   "parentObjectId":null,
   "persistent":false,

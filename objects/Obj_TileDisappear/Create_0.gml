@@ -2,7 +2,6 @@ event_inherited();
 isBus = false;
 maxRerolls = 0;
 
-color = c_white;
 checkmarkSprite = Spr_Checkmark;
 
 notHovering = function() {

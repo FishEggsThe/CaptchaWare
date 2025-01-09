@@ -1,5 +1,4 @@
 event_inherited();
-color = c_white;
 checked = false;
 checkmarkSprite = Spr_Checkmark;
 

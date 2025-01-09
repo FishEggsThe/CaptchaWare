@@ -1,18 +1,21 @@
 {
   "$GMObject":"",
-  "%Name":"Obj_GameManager",
+  "%Name":"Obj_SubmitName",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"Obj_GameManager",
+  "name":"Obj_SubmitName",
   "overriddenProperties":[],
   "parent":{
-    "name":"Gameplay Objects",
-    "path":"folders/Objects/Gameplay Objects.yy",
+    "name":"Menu Objects",
+    "path":"folders/Objects/Menu Objects.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"Obj_Button",
+    "path":"objects/Obj_Button/Obj_Button.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -30,7 +33,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"Spr_Button",
+    "path":"sprites/Spr_Button/Spr_Button.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

@@ -11,7 +11,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"02 - Pick All Buses",
-    "path":"folders/Objects/Common Objects/02 - Pick All Buses.yy",
+    "path":"folders/Objects/Microgame Objects/02 - Pick All Buses.yy",
   },
   "parentObjectId":{
     "name":"Obj_Button",
