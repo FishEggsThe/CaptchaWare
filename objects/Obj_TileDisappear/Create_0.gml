@@ -2,7 +2,7 @@ event_inherited();
 isBus = false;
 maxRerolls = 0;
 
-checkmarkSprite = Spr_Checkmark;
+imageSprite = Spr_Checkmark;
 
 notHovering = function() {
 	lerpToSize = 1;
@@ -21,4 +21,6 @@ checkReleased = function() {
 	maxRerolls--;
 	mask_index = noone;
 	isBus = maxRerolls > 0;
+	
+	GetNewTileSprite();
 };

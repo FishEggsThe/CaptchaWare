@@ -54,6 +54,7 @@ global.migrogameList[index] = new microgame(create, win, time, popupText, contro
 
 // Pick all Buses
 create = function(_difficulty) {
+	instance_create_layer(0, 0, "Game_Instances", Obj_TileSpriteBank);
 	// Laying out tiles
 	// I hate whenever I have to do this
 	var dims = 3+_difficulty, margin = 1.1, width = sprite_get_width(Spr_Button),
@@ -71,8 +72,11 @@ create = function(_difficulty) {
 		var listPick = irandom(array_length(indexList)-1),
 			randI = indexList[listPick], 
 			tile = instance_find(Obj_TileDisappear, randI);
-		tile.isBus = true;
-		tile.maxRerolls = choose(1, 2);
+		with tile {
+			isBus = true;
+			maxRerolls = choose(1, 2);
+			GetNewTileSprite();
+		}
 		array_delete(indexList, listPick, 1);
 	}
 };

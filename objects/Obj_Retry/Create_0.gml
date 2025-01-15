@@ -1,5 +1,7 @@
 event_inherited();
 
+depth = -20;
+
 notHovering = function() {
 	color = c_white;
 };
@@ -13,11 +15,12 @@ check = function() {
 };
 
 checkPressed = function() {
-	with Obj_Control {
+	with Obj_GameManager {
 		difficulty = 0;
 		currRound = 0;
 		playerScore = 0;
-		timeline_running = true;
+		playerLives = 4
+		layer_sequence_play(currSequence.seqID);
 	}
 	
 	instance_destroy(Obj_GoBack);

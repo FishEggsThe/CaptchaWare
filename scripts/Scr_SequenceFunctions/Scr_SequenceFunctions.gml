@@ -16,9 +16,9 @@ function ChangeSequence(_key) {
 function BreakTime_0() {
 	with Obj_GameManager {
 		currRound++;
-		selectMicrogame = microgames[irandom(microgamesSize-1)];
+		//selectMicrogame = microgames[irandom(microgamesSize-1)];
 		//selectMicrogame = microgames[microgamesSize-1];
-		//selectMicrogame = microgames[1];
+		selectMicrogame = microgames[1];
 	}
 }
 function BreakTime_30() {
@@ -46,7 +46,7 @@ function GameResults_60() {
 		if gameWon
 			playerScore++;
 		else
-			playerLives--;
+			playerLives-=4;
 	}
 }
 function GameResults_120() {
@@ -57,7 +57,7 @@ function GameResults_120() {
 			layer_destroy_instances("Game_Instances");
 			instance_create_layer(room_width/2-80, room_height/2, "Instances", Obj_Retry);
 			instance_create_layer(room_width/2+80, room_height/2, "Instances", Obj_GoBack);
-			//show_debug_message(instance_number(Obj_TileDisappear));
+			show_debug_message(instance_number(Obj_Retry));
 			state = gameOverState;
 			gameOver = true;
 			//timeline_running = false;

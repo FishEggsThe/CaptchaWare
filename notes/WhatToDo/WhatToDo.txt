@@ -1,5 +1,4 @@
 !! Current Objectives:
-* Migrate from Timelines to Sequences
 * Buttons and functionality for game over screen to retry or go back to name entry
 * More microgames
 * Add a camera
@@ -20,6 +19,7 @@ Visual/Animation Related Future Objectives:
 * Add distortion to type prompt microgame
 
 Finished Objectives (Latest to Earliest):
+* Migrate from Timelines to Sequences
 * Main menu to type out username for leaderboards
 * Increment difficulty every number of rounds
 * Type prompt microgame

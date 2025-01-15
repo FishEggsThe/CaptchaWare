@@ -1,5 +1,7 @@
 event_inherited();
 
+depth = -20;
+
 notHovering = function() {
 	color = c_white;
 };
