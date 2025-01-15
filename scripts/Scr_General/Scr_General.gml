@@ -7,7 +7,7 @@ function DrawSprite(_sprite, _subimg, _x, _y, _xscale=1, _yscale=1, _rot=0, _col
 }
 
 function DrawText(_x, _y, _string, _halign, _valign, _color=c_black, _xscale=1, _yscale=1, _angle=0, _alpha=1) {
-	draw_set_halign(_halign); draw_set_valign(_valign);
+	draw_set_halign(_halign); draw_set_valign(_valign); draw_set_font(Ft_ComicSans);
 	draw_text_transformed_color(_x, _y, _string, _xscale, _yscale, _angle, 
 								_color, _color, _color, _color, _alpha);
 }
@@ -35,8 +35,7 @@ function CheckIfDuplicate(_instance = id) {
 // Below is the debug stuff
 function DrawDebugText(_strings) {
 	var i, margin = 5, incTextLayer = 20, layers = array_length(_strings);
-	draw_set_halign(fa_left); draw_set_valign(fa_top); draw_set_color(c_black);
 
 	for(i = 0; i < layers; i++;)
-		draw_text(margin, margin+i*incTextLayer+10, _strings[i]);
+		DrawText(margin, margin+i*incTextLayer+10, _strings[i], fa_left, fa_top);
 }

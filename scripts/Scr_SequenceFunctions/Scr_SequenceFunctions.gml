@@ -16,9 +16,9 @@ function ChangeSequence(_key) {
 function BreakTime_0() {
 	with Obj_GameManager {
 		currRound++;
-		//selectMicrogame = microgames[irandom(microgamesSize-1)];
+		selectMicrogame = microgames[irandom(microgamesSize-1)];
 		//selectMicrogame = microgames[microgamesSize-1];
-		selectMicrogame = microgames[1];
+		//selectMicrogame = microgames[1];
 	}
 }
 function BreakTime_30() {

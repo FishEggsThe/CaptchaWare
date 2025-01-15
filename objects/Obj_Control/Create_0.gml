@@ -1,3 +1,3 @@
-if CheckIfDuplicate() { instance_destroy(); }
+if CheckIfDuplicate() { exit; }
 
 playerName = "farto leggo";
