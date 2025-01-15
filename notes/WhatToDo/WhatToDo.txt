@@ -1,4 +1,5 @@
 !! Current Objectives:
+* Migrate from Timelines to Sequences
 * Buttons and functionality for game over screen to retry or go back to name entry
 * More microgames
 * Add a camera
@@ -6,15 +7,17 @@
 
 Future Objectives:
 * Refine how a microgame is selected
-* Break time animations
 * High score list
-* Transition with shader to make Captcha screen transparent
-* Make game more appealing to look at
-* Add distortion to type prompt microgame
 * Hide rabbit
 
 Hard Maybe Objectives:
 * Save scores online through server
+
+Visual/Animation Related Future Objectives:
+* Break time animations
+* Transition with shader to make Captcha screen transparent
+* Make game more appealing to look at
+* Add distortion to type prompt microgame
 
 Finished Objectives (Latest to Earliest):
 * Main menu to type out username for leaderboards

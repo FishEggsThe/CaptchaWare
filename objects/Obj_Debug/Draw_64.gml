@@ -10,11 +10,11 @@ var gm,
 if instance_exists(Obj_GameManager) {
 	gm = Obj_GameManager
 	array_push(debugLog, "Game Timer: " + string(gm.gameTimer));
-	array_push(debugLog, "Break Timer: " + string(gm.timeline_position));
+	array_push(debugLog, "Break Timer: " + string(gm.currSequence.seq.headPosition));
 	array_push(debugLog, "Game Won: " + string(gm.gameWon));
 	array_push(debugLog, "Lives: " + string(gm.playerLives));
 	array_push(debugLog, "Score: " + string(gm.playerScore));
-	array_push(debugLog, "Timeline Currently Running: " + string(gm.timeline_running));
+	array_push(debugLog, "Timeline Currently Running: " + string(gm.currSequence.seq.paused));
 	array_push(debugLog, "State: " + string(gm.currentState));
 }
 if instance_exists(Obj_CaptchaScreen) {
@@ -26,6 +26,6 @@ if instance_exists(Obj_Control) {
 	array_push(debugLog, "Player Name: " + string(ct.playerName));
 }
 array_push(debugLog, "Game Speed: " + string(global.gameSpeed));
-array_push(debugLog, "No. of Button Managers: " + string(instance_number(Obj_ButtonManager)));
+array_push(debugLog, "No. of Button Managers: " + string(instance_number(Obj_SubmitName)));
 
 DrawDebugText(debugLog);

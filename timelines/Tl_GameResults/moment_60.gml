@@ -1,4 +1,4 @@
 if gameWon
 	Obj_GameManager.playerScore++;
 else
-	Obj_GameManager.playerLives--;
+	Obj_GameManager.playerLives-=4;

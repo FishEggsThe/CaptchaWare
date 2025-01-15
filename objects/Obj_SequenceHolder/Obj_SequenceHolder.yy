@@ -1,15 +1,13 @@
 {
   "$GMObject":"",
-  "%Name":"Obj_Control",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"Obj_SequenceHolder",
+  "eventList":[],
   "managed":true,
-  "name":"Obj_Control",
+  "name":"Obj_SequenceHolder",
   "overriddenProperties":[],
   "parent":{
-    "name":"Misc Objects",
-    "path":"folders/Objects/Misc Objects.yy",
+    "name":"Gameplay Objects",
+    "path":"folders/Objects/Gameplay Objects.yy",
   },
   "parentObjectId":null,
   "persistent":false,

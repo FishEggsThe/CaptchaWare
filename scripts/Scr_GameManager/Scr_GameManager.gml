@@ -27,7 +27,7 @@ function CheckIfCanInteract() {
 global.gameSpeed = 1;
 function SetGameSpeed(_speed) {
 	global.gameSpeed = _speed;
-	Obj_GameManager.timeline_speed = _speed;
+	Obj_GameManager.currSequence.seq.speedScale = _speed;
 }
 function ResetGameSpeed() {
 	SetGameSpeed(1);

@@ -1,21 +1,22 @@
 {
   "$GMObject":"",
-  "%Name":"Obj_Debug",
+  "%Name":"Obj_Retry",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":64,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"Obj_Debug",
+  "name":"Obj_Retry",
   "overriddenProperties":[],
   "parent":{
-    "name":"Misc Objects",
-    "path":"folders/Objects/Misc Objects.yy",
+    "name":"Game Over",
+    "path":"folders/Objects/Gameplay Objects/Game Over.yy",
   },
-  "parentObjectId":null,
-  "persistent":true,
+  "parentObjectId":{
+    "name":"Obj_Button",
+    "path":"objects/Obj_Button/Obj_Button.yy",
+  },
+  "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
   "physicsFriction":0.2,
@@ -32,7 +33,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"Spr_Button",
+    "path":"sprites/Spr_Button/Spr_Button.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

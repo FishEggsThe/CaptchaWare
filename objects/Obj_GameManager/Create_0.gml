@@ -20,17 +20,40 @@ playerScore = 0;
 gameWon = false;
 gameOver = false;
 
-// Figure out if you need these values later
-breakTimer = 0;
-setBreakTimer = 120;
+// Sequences here
+sequences = ds_map_create();
+var seqID, seq;
+// Break Time
+seqID = layer_sequence_create("Sequences", 0, 0, Sq_BreakTime);
+seq = layer_sequence_get_instance(seqID);
+layer_sequence_pause(seqID)
+ds_map_add(sequences, "Break", new sequenceInfo(seqID, seq));
+
+// Game Results
+seqID = layer_sequence_create("Sequences", 0, 0, Sq_GameResults);
+seq = layer_sequence_get_instance(seqID);
+layer_sequence_pause(seqID)
+ds_map_add(sequences, "Results", new sequenceInfo(seqID, seq));
+
+// Level Up
+seqID = layer_sequence_create("Sequences", 0, 0, Sq_LevelUp);
+seq = layer_sequence_get_instance(seqID);
+layer_sequence_pause(seqID)
+ds_map_add(sequences, "LevelUp", new sequenceInfo(seqID, seq));
+
+// Startup
+seqID = layer_sequence_create("Sequences", 0, 0, Sq_Startup);
+seq = layer_sequence_get_instance(seqID);
+layer_sequence_play(seqID)
+ds_map_add(sequences, "Startup", new sequenceInfo(seqID, seq));
+
+currSequence = sequences[? "Startup"];
+// End of Sequences here
 
 showControls = false;
 
 gameTimer = 0;
 gameWonTimer = 120;
-
-timeline_index = Tl_Startup//Tl_BreakTime;
-timeline_running = true;
 
 // This part is dedicated to initializing states
 state = noone;
@@ -46,10 +69,8 @@ gameState = function() {
 		gameTimer--;
 	} else {
 		with Obj_CaptchaScreen { lerpToSize = minSize; }
-		timeline_position = 0;
-		timeline_running = true;
 		
-		timeline_index = Tl_GameResults;
+		ChangeSequence("Results");
 		state = gameWon ? winGameState : loseGameState;
 	}
 	currentState = "Game";
@@ -81,11 +102,6 @@ levelUpState = function() {
 	currentState = "Level Up";
 }
 startupState = function() {
-	if timeline_position > timeline_max_moment(timeline_index) {
-		timeline_position = 0;
-		timeline_index = Tl_BreakTime;
-		state = breakState;
-	}
 	currentState = "Startup";
 }
 

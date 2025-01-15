@@ -1,0 +1,6 @@
+!! Current Bugs:
+* Figure out why Obj_Retry and Obj_GoBack won't spawn in timeline
+- None right now :3
+
+Bugs Fixed as of January 9th (Latest to Earliest):
+* Fixed duplicate button managers spawning
