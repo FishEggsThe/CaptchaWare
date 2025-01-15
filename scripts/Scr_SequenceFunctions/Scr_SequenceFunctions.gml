@@ -82,7 +82,9 @@ function LevelUp_0() {
 }
 function LevelUp_180() {
 	ChangeSequence("Break");
-	state = breakState;
+	with Obj_GameManager {
+		state = breakState;
+	}
 }
 #endregion
 
