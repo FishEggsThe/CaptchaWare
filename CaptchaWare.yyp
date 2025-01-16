@@ -49,6 +49,7 @@
     {"id":{"name":"WhatToDo","path":"notes/WhatToDo/WhatToDo.yy",},},
     {"id":{"name":"Obj_Button","path":"objects/Obj_Button/Obj_Button.yy",},},
     {"id":{"name":"Obj_ButtonManager","path":"objects/Obj_ButtonManager/Obj_ButtonManager.yy",},},
+    {"id":{"name":"Obj_Camera","path":"objects/Obj_Camera/Obj_Camera.yy",},},
     {"id":{"name":"Obj_CaptchaScreen","path":"objects/Obj_CaptchaScreen/Obj_CaptchaScreen.yy",},},
     {"id":{"name":"Obj_Checkbox","path":"objects/Obj_Checkbox/Obj_Checkbox.yy",},},
     {"id":{"name":"Obj_Control","path":"objects/Obj_Control/Obj_Control.yy",},},
