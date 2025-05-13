@@ -48,6 +48,7 @@
   "resources":[
     {"id":{"name":"Ft_ComicSans","path":"fonts/Ft_ComicSans/Ft_ComicSans.yy",},},
     {"id":{"name":"BugList","path":"notes/BugList/BugList.yy",},},
+    {"id":{"name":"README","path":"notes/README/README.yy",},},
     {"id":{"name":"WhatToDo","path":"notes/WhatToDo/WhatToDo.yy",},},
     {"id":{"name":"Obj_Button","path":"objects/Obj_Button/Obj_Button.yy",},},
     {"id":{"name":"Obj_ButtonManager","path":"objects/Obj_ButtonManager/Obj_ButtonManager.yy",},},
