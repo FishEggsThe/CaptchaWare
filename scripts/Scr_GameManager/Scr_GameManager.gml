@@ -47,7 +47,7 @@ function IncrementGameSpeed(_inc = 0.05) {
 var create, win, time, popupText, controls, index = 0;
 global.migrogameList = [];
 
-// Click the Checkbox
+#region Click the Checkbox
 create = function(_difficulty) {
 	var xPos = room_width/2 + random_range(-128, 128)*_difficulty, 
 		yPos = room_height/2 + random_range(-96, 96)*_difficulty,
@@ -61,8 +61,9 @@ win = function() {
 };
 time = 240; popupText = "Check the Box"; controls = [true, false];
 global.migrogameList[index] = new microgame(create, win, time, popupText, controls); index++;
+#endregion
 
-// Pick all Buses
+#region Pick all Buses
 create = function(_difficulty) {
 	instance_create_layer(0, 0, "Game_Instances", Obj_TileSpriteBank);
 	// Laying out tiles
@@ -99,8 +100,9 @@ win = function() {
 };
 time = 300; popupText = "Pick all Buses"; controls = [true, false];
 global.migrogameList[index] = new microgame(create, win, time, popupText, controls); index++;
+#endregion
 
-// Type the Prompt
+#region Type the Prompt
 create = function(_difficulty) {
 	//160, 256
 	instance_create_layer(160, 256, "Game_Instances", Obj_TypePrompt);
@@ -113,6 +115,7 @@ win = function() {
 };
 time = 240; popupText = "Type the Prompt"; controls = [false, true];
 global.migrogameList[index] = new microgame(create, win, time, popupText, controls); index++;
+#endregion
 
 // Microgame Template
 //create = function(_difficulty) {

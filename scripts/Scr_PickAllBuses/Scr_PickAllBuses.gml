@@ -1,7 +1,7 @@
 function GetNewTileSprite(){
-	var newSprite, bus = isBus;
+	var newSprite;
 	with Obj_TileSpriteBank {
-		if bus {
+		if isBus {
 			newSprite = buses[irandom(busesLength-1)];
 		} else {
 			if random(99) < 1
