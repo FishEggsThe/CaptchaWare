@@ -72,7 +72,7 @@ gameState = function() {
 		if (win && gameTimer > gameWonTimer) {
 			gameTimer = gameWonTimer;
 		}
-		gameTimer--;
+		gameTimer-=GetGameSpeed();
 	} else {
 		with Obj_CaptchaScreen { lerpToSize = minSize; }
 		
@@ -101,6 +101,11 @@ winGameState = function() {
 loseGameState = function() {
 	//if timeline_position > timeline_max_moment(timeline_index) {}
 	currentState = "Lost Game";
+}
+// When the game speed goes up
+speedUpState = function() {
+	//if timeline_position > timeline_max_moment(timeline_index) {}
+	currentState = "Speed Up";
 }
 // When the difficulty goes up
 levelUpState = function() {

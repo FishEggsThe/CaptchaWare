@@ -56,8 +56,9 @@ function GameResults_120() {
 		if (!gameWon && playerLives <= 0) {
 			ResetGameSpeed();
 			layer_destroy_instances("Game_Instances");
-			instance_create_layer(room_width/2-80, room_height/2, "Instances", Obj_Retry);
-			instance_create_layer(room_width/2+80, room_height/2, "Instances", Obj_GoBack);
+			//instance_create_layer(room_width/2-80, room_height/2, "Instances", Obj_Retry);
+			//instance_create_layer(room_width/2+80, room_height/2, "Instances", Obj_GoBack);
+			instance_create_layer(0, 0, "Instances", Obj_GameOverButtons);
 			show_debug_message(instance_number(Obj_Retry));
 			state = gameOverState;
 			gameOver = true;
@@ -71,7 +72,7 @@ function GameResults_120() {
 			state = levelUpState;
 		} else if (currRound % 3 == 0) {
 			ChangeSequence("SpeedUp");
-			state = levelUpState;
+			state = speedUpState;
 		} else {
 			ChangeSequence("Break");
 			state = breakState;
