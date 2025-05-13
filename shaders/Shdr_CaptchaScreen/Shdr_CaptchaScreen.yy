@@ -1,0 +1,12 @@
+{
+  "$GMShader":"",
+  "%Name":"Shdr_CaptchaScreen",
+  "name":"Shdr_CaptchaScreen",
+  "parent":{
+    "name":"Shaders",
+    "path":"folders/Shaders.yy",
+  },
+  "resourceType":"GMShader",
+  "resourceVersion":"2.0",
+  "type":1,
+}

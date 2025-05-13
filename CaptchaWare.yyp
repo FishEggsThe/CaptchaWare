@@ -80,6 +80,7 @@
     {"id":{"name":"Sq_LevelUp","path":"sequences/Sq_LevelUp/Sq_LevelUp.yy",},},
     {"id":{"name":"Sq_SpeedUp","path":"sequences/Sq_SpeedUp/Sq_SpeedUp.yy",},},
     {"id":{"name":"Sq_Startup","path":"sequences/Sq_Startup/Sq_Startup.yy",},},
+    {"id":{"name":"Shdr_CaptchaScreen","path":"shaders/Shdr_CaptchaScreen/Shdr_CaptchaScreen.yy",},},
     {"id":{"name":"chives","path":"sprites/chives/chives.yy",},},
     {"id":{"name":"Spr_Button","path":"sprites/Spr_Button/Spr_Button.yy",},},
     {"id":{"name":"Spr_CaptchaScreen","path":"sprites/Spr_CaptchaScreen/Spr_CaptchaScreen.yy",},},
