@@ -7,12 +7,14 @@ function microgame(_createGame, _winCondition, _time, _popupText, _controls) con
 }
 
 function CreateMicrogameList(_microgames) {
-	Obj_GameManager.microgames = [];
+	with Obj_GameManager {
+		microgames = [];
 	
 	// Fill up Microgame list
-	var i, numOfGames = array_length(_microgames);
+	var i = 0, numOfGames = array_length(_microgames);
 	for(i = numOfGames-1; i >= 0; i--)
-		Obj_GameManager.microgames[i] = _microgames[i];
+		microgames[i] = _microgames[i];
+	}
 }
 
 function CheckIfCanInteract() {
@@ -36,8 +38,8 @@ function GetGameSpeed() {
 function ResetGameSpeed() {
 	SetGameSpeed(1);
 }
-function IncrementGameSpeed(inc = 0.05) {
-	SetGameSpeed(GetGameSpeed()+inc);
+function IncrementGameSpeed(_inc = 0.05) {
+	SetGameSpeed(GetGameSpeed()+_inc);
 }
 #endregion
 

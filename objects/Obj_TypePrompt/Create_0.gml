@@ -1,7 +1,7 @@
 event_inherited();
 
 prompt = "";
-promptSize = 4//+2*Obj_GameManager.difficulty;
+promptSize = 3+Obj_GameManager.difficulty;
 
 var i, validSize = 10 + 26*2, validIndex = validSize - 1, validChars = [];
 
