@@ -13,12 +13,13 @@ function DrawText(_x, _y, _string, _halign, _valign, _color=c_black, _xscale=1, 
 
 // Standardizing game speed across any kind of movement
 function MoveObjectGameSpeed(_obj, _x, _y) {
-	_obj.x += _x * global.gameSpeed;
-	_obj.y += _y * global.gameSpeed;
+	var gameSpeed = GetGameSpeed();
+	_obj.x += _x * gameSpeed;
+	_obj.y += _y * gameSpeed;
 }
 
 function LerpToGameSpeed(_start, _end, _lerpValue) {
-	return lerp(_start, _end, _lerpValue * global.gameSpeed);
+	return lerp(_start, _end, _lerpValue * GetGameSpeed());
 }
 
 // if CheckIfDuplicate() { exit; }
