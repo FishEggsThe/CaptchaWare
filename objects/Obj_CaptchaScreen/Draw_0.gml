@@ -1,6 +1,8 @@
 if size >= maxSize { exit; }
 
+// idk man just figure this shader out I got shit to do, peace
 shader_set(Shdr_CaptchaScreen);
+shader_set_uniform_f(uSize, size);
 DrawSprite(sprite, 0, x, y, maxSize, maxSize, 0, backgroundColor, 2-size);
 shader_reset();
 
