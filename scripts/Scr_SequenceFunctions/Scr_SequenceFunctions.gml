@@ -46,7 +46,7 @@ function GameResults_60() {
 		if gameWon
 			playerScore++;
 		else
-			playerLives-=4;
+			playerLives--;
 	}
 }
 function GameResults_120() {
@@ -54,6 +54,7 @@ function GameResults_120() {
 		//timeline_position = 0;
 		// If you lost all your lives
 		if (!gameWon && playerLives <= 0) {
+			ResetGameSpeed();
 			layer_destroy_instances("Game_Instances");
 			instance_create_layer(room_width/2-80, room_height/2, "Instances", Obj_Retry);
 			instance_create_layer(room_width/2+80, room_height/2, "Instances", Obj_GoBack);
@@ -65,8 +66,11 @@ function GameResults_120() {
 			ChangeSequence("Startup");
 			layer_sequence_pause(currSequence.seqID);
 			
-		} else if (currRound % 12 == 0 && difficulty < 3) {
+		} else if (currRound % 10 == 0 && difficulty < 2) {
 			ChangeSequence("LevelUp");
+			state = levelUpState;
+		} else if (currRound % 3 == 0) {
+			ChangeSequence("SpeedUp");
 			state = levelUpState;
 		} else {
 			ChangeSequence("Break");
@@ -76,9 +80,22 @@ function GameResults_120() {
 }
 #endregion
 
+#region Speed Up
+function SpeedUp_0() {
+	IncrementGameSpeed();
+}
+function SpeedUp_180() {
+	ChangeSequence("Break");
+	with Obj_GameManager {
+		state = breakState;
+	}
+}
+#endregion
+
 #region Level Up
 function LevelUp_0() {
 	Obj_GameManager.difficulty++;
+	ResetGameSpeed()
 }
 function LevelUp_180() {
 	ChangeSequence("Break");

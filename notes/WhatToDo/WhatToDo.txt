@@ -1,7 +1,9 @@
 !! Current Objectives:
 * More microgames
-* Add a camera
 * Smooth slide transition from main menu to game screen
+* Make game speed up
+* Microgame timer
+* Boss Stage
 
 Future Objectives:
 * Refine how a microgame is selected
@@ -17,6 +19,7 @@ Visual/Animation Related Future Objectives:
 * Add distortion to type prompt microgame
 
 Finished Objectives (Latest to Earliest):
+* Add a camera
 * Hide rabbit
 * Buttons and functionality for game over screen to retry or go back to name entry
 * Migrate from Timelines to Sequences

@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"Scr_PickAllBuses",
   "parent":{
-    "name":"Scripts",
-    "path":"folders/Scripts.yy",
+    "name":"Microgame Scripts",
+    "path":"folders/Scripts/Microgame Scripts.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

@@ -24,14 +24,22 @@ function CheckIfCanInteract() {
 	return true;
 }
 
+#region Game Speed
 global.gameSpeed = 1;
 function SetGameSpeed(_speed) {
 	global.gameSpeed = _speed;
 	Obj_GameManager.currSequence.seq.speedScale = _speed;
 }
+function GetGameSpeed() {
+	return global.gameSpeed;
+}
 function ResetGameSpeed() {
 	SetGameSpeed(1);
 }
+function IncrementGameSpeed(inc = 0.05) {
+	SetGameSpeed(GetGameSpeed()+inc);
+}
+#endregion
 
 // Setup all microgames
 var create, win, time, popupText, controls, index = 0;
