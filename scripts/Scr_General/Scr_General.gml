@@ -35,3 +35,13 @@ function DrawDebugText(_strings) {
 	for(i = 0; i < layers; i++;)
 		DrawText(margin, margin+i*incTextLayer+10, _strings[i], fa_left, fa_top);
 }
+
+// It's fun to make these error messages and never use them
+function ConsoleErrorMessage(_message) {
+	show_debug_message("**********************************************");
+	show_debug_message("****************************************************************");
+	show_debug_message("\n" + _message + "\n");
+	show_debug_message("****************************************************************");
+	show_debug_message("**********************************************");
+}
+ConsoleErrorMessage("Don't worry, this is just a test");

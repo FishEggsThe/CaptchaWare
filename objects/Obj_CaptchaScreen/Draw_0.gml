@@ -1,10 +1,12 @@
 if size >= maxSize { exit; }
 
-// idk man just figure this shader out I got shit to do, peace
-shader_set(Shdr_CaptchaScreen);
-shader_set_uniform_f(uSize, size);
 DrawSprite(sprite, 0, x, y, maxSize, maxSize, 0, backgroundColor, 2-size);
-shader_reset();
+
+// idk man just figure this shader out I got shit to do, peace
+//shader_set(Shdr_CaptchaScreen);
+//shader_set_uniform_f(uSize, size);
+//DrawSprite(sprite, 0, x, y, maxSize, maxSize, 0, backgroundColor, 2-size);
+//shader_reset();
 
 var i, gm = Obj_GameManager, alpha = (2-size)*(0.5+!Obj_Debug.debug*0.5);
 for(i = 0; i < gm.playerLives; i++) {

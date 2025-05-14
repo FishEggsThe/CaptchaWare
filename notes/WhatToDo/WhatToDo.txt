@@ -1,5 +1,6 @@
 !! Current Objectives:
 * Rework how difficulty and game speed are set within sequences
+* Change the state system cause it's pointless outside of housing the game state and for debug
 * More microgames
 * Smooth slide transition from main menu to game screen
 * Microgame timer

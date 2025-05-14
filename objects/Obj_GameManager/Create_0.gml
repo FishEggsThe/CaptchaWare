@@ -12,7 +12,7 @@ holdList = array_create(holdSize, -1);
 availableIndexes = array_create_ext(microgamesSize-holdSize-1, function(_index) {return _index;});
 pickIndex = -1;
 
-difficulty = 2;
+difficulty = 0;
 playerLives = 4;
 //gameSpeed = 1;
 currRound = 0;
@@ -20,7 +20,7 @@ playerScore = 0;
 gameWon = false;
 gameOver = false;
 
-// Sequences here
+#region Sequences here
 sequences = ds_map_create();
 var seqID, seq;
 // Break Time
@@ -29,11 +29,17 @@ seq = layer_sequence_get_instance(seqID);
 layer_sequence_pause(seqID)
 ds_map_add(sequences, "Break", new sequenceInfo(seqID, seq));
 
-// Game Results
-seqID = layer_sequence_create("Sequences", 0, 0, Sq_GameResults);
+// Game Results (Win)
+seqID = layer_sequence_create("Sequences", 0, 0, Sq_GameResultsWin);
 seq = layer_sequence_get_instance(seqID);
 layer_sequence_pause(seqID)
-ds_map_add(sequences, "Results", new sequenceInfo(seqID, seq));
+ds_map_add(sequences, "WinResults", new sequenceInfo(seqID, seq));
+
+// Game Results (Lost)
+seqID = layer_sequence_create("Sequences", 0, 0, Sq_GameResultsLose);
+seq = layer_sequence_get_instance(seqID);
+layer_sequence_pause(seqID)
+ds_map_add(sequences, "LoseResults", new sequenceInfo(seqID, seq));
 
 // Speed Up
 seqID = layer_sequence_create("Sequences", 0, 0, Sq_SpeedUp);
@@ -47,73 +53,25 @@ seq = layer_sequence_get_instance(seqID);
 layer_sequence_pause(seqID)
 ds_map_add(sequences, "LevelUp", new sequenceInfo(seqID, seq));
 
+// Game Over
+seqID = layer_sequence_create("Sequences", 0, 0, Sq_GameOver);
+seq = layer_sequence_get_instance(seqID);
+layer_sequence_pause(seqID)
+ds_map_add(sequences, "GameOver", new sequenceInfo(seqID, seq));
+
 // Startup
 seqID = layer_sequence_create("Sequences", 0, 0, Sq_Startup);
 seq = layer_sequence_get_instance(seqID);
-layer_sequence_play(seqID)
+layer_sequence_play(seqID) // MAKE SURE THIS IS THE ONLY SEQUENCE SET TO PLAY ON START PLEASE
 ds_map_add(sequences, "Startup", new sequenceInfo(seqID, seq));
 
 currSequence = sequences[? "Startup"];
-// End of Sequences here
+#endregion End of Sequences here
 
 showControls = false;
 
 gameTimer = 0;
 gameWonTimer = 120;
 
-// This part is dedicated to initializing states
-state = noone;
-currentState = "";
-// While a microgame is being played
-gameState = function() {
-	if gameTimer > 0 {
-		var win = selectMicrogame.winCondition()
-		gameWon = win;
-		if (win && gameTimer > gameWonTimer) {
-			gameTimer = gameWonTimer;
-		}
-		gameTimer-=GetGameSpeed();
-	} else {
-		with Obj_CaptchaScreen { lerpToSize = minSize; }
-		
-		ChangeSequence("Results");
-		state = gameWon ? winGameState : loseGameState;
-	}
-	currentState = "Game";
-		
-}
-// The time right before a microgame is to be played
-breakState = function() {
-	//if timeline_position > timeline_max_moment(timeline_index) {}
-	currentState = "Break";
-}
-// The game over screen
-gameOverState = function() {
-	currentState = "Game Over";
-	
-}
-// Right after a microgame is won
-winGameState = function() {
-	//if timeline_position > timeline_max_moment(timeline_index) {}
-	currentState = "Won Game";
-}
-// Right after a microgame is lost
-loseGameState = function() {
-	//if timeline_position > timeline_max_moment(timeline_index) {}
-	currentState = "Lost Game";
-}
-// When the game speed goes up
-speedUpState = function() {
-	//if timeline_position > timeline_max_moment(timeline_index) {}
-	currentState = "Speed Up";
-}
-// When the difficulty goes up
-levelUpState = function() {
-	//if timeline_position > timeline_max_moment(timeline_index) {}
-	currentState = "Level Up";
-}
-startupState = function() {
-	currentState = "Startup";
-}
-
-state = startupState;
+inGameState = false;
+currentState = "Break";

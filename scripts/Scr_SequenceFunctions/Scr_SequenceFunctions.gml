@@ -5,10 +5,32 @@ function sequenceInfo(_id, _seq) constructor {
 
 function ChangeSequence(_key) {
 	with Obj_GameManager {
+		inGameState = _key == "Game";
+		if inGameState {
+			currentState = _key;
+			return; 
+		}
+			
 		layer_sequence_pause(currSequence.seqID);
-		currSequence = sequences[? _key];
-		currSequence.seq.headPosition = 0;
-		layer_sequence_play(currSequence.seqID);
+		if ds_map_exists(sequences, _key) {
+			currSequence = sequences[? _key];
+			currSequence.seq.headPosition = 0;
+			layer_sequence_play(currSequence.seqID);
+			currentState = _key;
+		} else {
+			ConsoleErrorMessage("Uh oh! Someone made a sequence typo!!!");
+			currentState = $"!{_key}!"
+		}
+	}
+}
+
+function DetermineRampUp() {
+	if (currRound % 10 == 0 && difficulty < 2) {
+		ChangeSequence("LevelUp");
+	} else if (currRound % 3 == 0) {
+		ChangeSequence("SpeedUp");
+	} else {
+		ChangeSequence("Break");
 	}
 }
 
@@ -34,48 +56,34 @@ function BreakTime_120() {
 	with Obj_GameManager {
 		gameTimer = selectMicrogame.time;
 		gameWon = false;
-		state = gameState;
 		layer_sequence_pause(currSequence.seqID);
+	}
+	ChangeSequence("Game");
+}
+#endregion
+
+#region Game Results (Win)
+function GameResultsWin_60() {
+	Obj_GameManager.playerScore++;
+}
+function GameResultsWin_120() {
+	with Obj_GameManager {
+		DetermineRampUp();
 	}
 }
 #endregion
 
-#region Game Results
-function GameResults_60() {
-	with Obj_GameManager {
-		if gameWon
-			playerScore++;
-		else
-			playerLives--;
-	}
+#region Game Results (Lose)
+function GameResultsLose_60() {
+	Obj_GameManager.playerLives--;
 }
-function GameResults_120() {
+function GameResultsLose_120() {
 	with Obj_GameManager {
-		//timeline_position = 0;
 		// If you lost all your lives
-		if (!gameWon && playerLives <= 0) {
-			ResetGameSpeed();
-			layer_destroy_instances("Game_Instances");
-			//instance_create_layer(room_width/2-80, room_height/2, "Instances", Obj_Retry);
-			//instance_create_layer(room_width/2+80, room_height/2, "Instances", Obj_GoBack);
-			instance_create_layer(0, 0, "Instances", Obj_GameOverButtons);
-			show_debug_message(instance_number(Obj_Retry));
-			state = gameOverState;
-			gameOver = true;
-			//timeline_running = false;
-			//timeline_index = Tl_Startup;
-			ChangeSequence("Startup");
-			layer_sequence_pause(currSequence.seqID);
-			
-		} else if (currRound % 10 == 0 && difficulty < 2) {
-			ChangeSequence("LevelUp");
-			state = levelUpState;
-		} else if (currRound % 3 == 0) {
-			ChangeSequence("SpeedUp");
-			state = speedUpState;
+		if playerLives <= 0 {
+			ChangeSequence("GameOver");
 		} else {
-			ChangeSequence("Break");
-			state = breakState;
+			DetermineRampUp();
 		}
 	}
 }
@@ -88,7 +96,6 @@ function SpeedUp_0() {
 function SpeedUp_180() {
 	ChangeSequence("Break");
 	with Obj_GameManager {
-		state = breakState;
 	}
 }
 #endregion
@@ -101,7 +108,7 @@ function LevelUp_0() {
 function LevelUp_180() {
 	ChangeSequence("Break");
 	with Obj_GameManager {
-		state = breakState;
+		//state = breakState;
 	}
 }
 #endregion
@@ -112,5 +119,16 @@ function Startup_30() {
 }
 function Startup_120() {
 	ChangeSequence("Break");
+}
+#endregion
+
+#region Game Over
+function GameOver_0() {
+	layer_destroy_instances("Game_Instances");
+	ResetGameSpeed();
+	gameOver = true;
+}
+function GameOver_120() {
+	instance_create_layer(0, 0, "Instances", Obj_GameOverButtons);
 }
 #endregion

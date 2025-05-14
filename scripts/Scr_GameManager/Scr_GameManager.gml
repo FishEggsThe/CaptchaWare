@@ -20,7 +20,7 @@ function CreateMicrogameList(_microgames) {
 function CheckIfCanInteract() {
 	if instance_exists(Obj_GameManager) {
 		with Obj_GameManager {
-			if !(state == gameState || state == gameOverState) { return false; }
+			if !(currentState == "Game" || currentState == "GameOver") { return false; }
 		}
 	}
 	return true;

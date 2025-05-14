@@ -1,6 +1,6 @@
 {
   "$GMSequence":"v1",
-  "%Name":"Sq_Startup",
+  "%Name":"Sq_GameResultsLose",
   "autoRecord":true,
   "backdropHeight":768,
   "backdropImageOpacity":0.5,
@@ -23,19 +23,19 @@
     "Keyframes":[
       {"$Keyframe<MomentsEventKeyframe>":"","Channels":{
           "0":{"$MomentsEventKeyframe":"","Events":[
-              "Startup_30",
+              "GameResultsLose_60",
             ],"resourceType":"MomentsEventKeyframe","resourceVersion":"2.0",},
-        },"Disabled":false,"id":"37a72703-6657-48d0-bc45-3da42de4f235","IsCreationKey":false,"Key":30.0,"Length":1.0,"resourceType":"Keyframe<MomentsEventKeyframe>","resourceVersion":"2.0","Stretch":false,},
+        },"Disabled":false,"id":"fa8d5e5b-0721-41f5-a037-c82184cca9a6","IsCreationKey":false,"Key":60.0,"Length":1.0,"resourceType":"Keyframe<MomentsEventKeyframe>","resourceVersion":"2.0","Stretch":false,},
       {"$Keyframe<MomentsEventKeyframe>":"","Channels":{
           "0":{"$MomentsEventKeyframe":"","Events":[
-              "Startup_120",
+              "GameResultsLose_120",
             ],"resourceType":"MomentsEventKeyframe","resourceVersion":"2.0",},
-        },"Disabled":false,"id":"dd756a3d-e588-4ac8-a9d0-34cf79c2ebc7","IsCreationKey":false,"Key":120.0,"Length":1.0,"resourceType":"Keyframe<MomentsEventKeyframe>","resourceVersion":"2.0","Stretch":false,},
+        },"Disabled":false,"id":"9c50138c-7673-4b90-a611-e6b338d268b4","IsCreationKey":false,"Key":120.0,"Length":1.0,"resourceType":"Keyframe<MomentsEventKeyframe>","resourceVersion":"2.0","Stretch":false,},
     ],
     "resourceType":"KeyframeStore<MomentsEventKeyframe>",
     "resourceVersion":"2.0",
   },
-  "name":"Sq_Startup",
+  "name":"Sq_GameResultsLose",
   "parent":{
     "name":"Sequences",
     "path":"folders/Sequences.yy",

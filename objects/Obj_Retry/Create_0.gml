@@ -20,7 +20,7 @@ checkPressed = function() {
 		currRound = 0;
 		playerScore = 0;
 		playerLives = 4
-		layer_sequence_play(currSequence.seqID);
+		ChangeSequence("Startup");
 	}
 	
 	instance_destroy(Obj_GoBack);
