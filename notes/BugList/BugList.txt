@@ -2,5 +2,6 @@
 - None right now :3
 
 Bugs Fixed as of January 9th (Latest to Earliest):
+* Fix GameOver sequence starting for some reason
 * Figure out why Obj_Retry and Obj_GoBack won't spawn in timeline
 * Fixed duplicate button managers spawning
