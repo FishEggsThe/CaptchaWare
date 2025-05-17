@@ -26,6 +26,38 @@ function CheckIfCanInteract() {
 	return true;
 }
 
+function DetermineRampUp() {
+	nextSpeedUp--;
+	nextBossStage--;
+	if (nextBossStage <= 0 && difficulty < 2) {
+		ResetDifficultyProgression()
+		ChangeSequence("LevelUp");
+	} else if (nextSpeedUp <= 0) {
+		nextSpeedUp = setNextSpeedUp;
+		ChangeSequence("SpeedUp");
+	} else {
+		ChangeSequence("Break");
+	}
+}
+
+function ResetDifficultyProgression() {
+	with Obj_GameManager {
+		nextSpeedUp = setNextSpeedUp;
+		nextBossStage = setNextBossStage;
+	}
+}
+
+function ResetGame() {
+	ResetDifficultyProgression()
+	with Obj_GameManager {
+		difficulty = 0;
+		currRound = 0;
+		playerScore = 0;
+		playerLives = 4
+		ChangeSequence("Startup");
+	}
+}
+
 #region Game Speed
 global.gameSpeed = 1;
 function SetGameSpeed(_speed) {

@@ -24,16 +24,6 @@ function ChangeSequence(_key) {
 	}
 }
 
-function DetermineRampUp() {
-	if (currRound % 10 == 0 && difficulty < 2) {
-		ChangeSequence("LevelUp");
-	} else if (currRound % 3 == 0) {
-		ChangeSequence("SpeedUp");
-	} else {
-		ChangeSequence("Break");
-	}
-}
-
 #region Break Time
 function BreakTime_0() {
 	with Obj_GameManager {

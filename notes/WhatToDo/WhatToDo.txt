@@ -1,9 +1,9 @@
 !! Current Objectives:
-* Rework how difficulty and game speed are set within sequences
 * More microgames
 * Smooth slide transition from main menu to game screen
 * Microgame timer
-* Boss Stage sequence and accompanying microgames
+* Boss Stage sequence
+* Boss Stage microgames
 
 Future Objectives:
 * Refine how a microgame is selected
@@ -19,6 +19,7 @@ Visual/Animation Related Future Objectives:
 * Add distortion to type prompt microgame
 
 Finished Objectives (Latest to Earliest):
+* Rework how difficulty and game speed are set within sequences
 * Change the state system cause it's pointless outside of housing the game state and for debug
 * Make game speed up
 * Add a camera

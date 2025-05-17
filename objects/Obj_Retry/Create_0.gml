@@ -15,13 +15,7 @@ check = function() {
 };
 
 checkPressed = function() {
-	with Obj_GameManager {
-		difficulty = 0;
-		currRound = 0;
-		playerScore = 0;
-		playerLives = 4
-		ChangeSequence("Startup");
-	}
+	ResetGame();
 	
 	instance_destroy(Obj_GoBack);
 	instance_destroy();

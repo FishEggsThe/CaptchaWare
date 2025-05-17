@@ -14,11 +14,15 @@ pickIndex = -1;
 
 difficulty = 0;
 playerLives = 4;
-//gameSpeed = 1;
 currRound = 0;
 playerScore = 0;
 gameWon = false;
 gameOver = false;
+
+setNextSpeedUp = 4;
+setNextBossStage = 12;
+nextSpeedUp = setNextSpeedUp;
+nextBossStage = setNextBossStage;
 
 #region Sequences here
 sequences = ds_map_create();
