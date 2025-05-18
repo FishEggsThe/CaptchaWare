@@ -1,8 +1,6 @@
 !! Current Objectives:
-* More microgames
-* Smooth slide transition from main menu to game screen
 * Microgame timer
-* Boss Stage sequence
+* More microgames
 * Boss Stage microgames
 
 Future Objectives:
@@ -17,8 +15,11 @@ Visual/Animation Related Future Objectives:
 * Transition with shader to make Captcha screen transparent
 * Make game more appealing to look at
 * Add distortion to type prompt microgame
+* Smooth slide transition from main menu to game screen
 
 Finished Objectives (Latest to Earliest):
+* Impove how a microgame is selected to consider boss microgames
+* Boss Stage sequence
 * Rework how difficulty and game speed are set within sequences
 * Change the state system cause it's pointless outside of housing the game state and for debug
 * Make game speed up

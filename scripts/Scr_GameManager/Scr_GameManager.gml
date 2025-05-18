@@ -6,16 +6,30 @@ function microgame(_createGame, _winCondition, _time, _popupText, _controls) con
 	controls = _controls;
 }
 
+#region Microgame stuff
 function CreateMicrogameList(_microgames) {
 	with Obj_GameManager {
 		microgames = [];
 	
-	// Fill up Microgame list
-	var i = 0, numOfGames = array_length(_microgames);
-	for(i = numOfGames-1; i >= 0; i--)
-		microgames[i] = _microgames[i];
+		// Fill up Microgame list
+		var i = 0, numOfGames = array_length(_microgames);
+		for(i = numOfGames-1; i >= 0; i--)
+			microgames[i] = _microgames[i];
 	}
 }
+
+function SelectMicrogame() {
+	with Obj_GameManager {
+		selectMicrogame = microgames[irandom(microgamesSize-1)];
+		//selectMicrogame = microgames[microgamesSize-1];
+		//selectMicrogame = microgames[1];
+	}
+}
+
+function SelectBossMicrogame() {
+	SelectMicrogame(); // Temporary, add boss microgames!!!!!!
+}
+#endregion
 
 function CheckIfCanInteract() {
 	if instance_exists(Obj_GameManager) {
@@ -30,8 +44,8 @@ function DetermineRampUp() {
 	nextSpeedUp--;
 	nextBossStage--;
 	if (nextBossStage <= 0 && difficulty < 2) {
-		ResetDifficultyProgression()
-		ChangeSequence("LevelUp");
+		ResetDifficultyProgression();
+		ChangeSequence("BossStage");
 	} else if (nextSpeedUp <= 0) {
 		nextSpeedUp = setNextSpeedUp;
 		ChangeSequence("SpeedUp");
@@ -145,7 +159,7 @@ win = function() {
 	}
 	return false;
 };
-time = 240; popupText = "Type the Prompt"; controls = [false, true];
+time = 360; popupText = "Type the Prompt"; controls = [false, true];
 global.migrogameList[index] = new microgame(create, win, time, popupText, controls); index++;
 #endregion
 

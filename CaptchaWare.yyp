@@ -75,6 +75,7 @@
     {"id":{"name":"Scr_General","path":"scripts/Scr_General/Scr_General.yy",},},
     {"id":{"name":"Scr_PickAllBuses","path":"scripts/Scr_PickAllBuses/Scr_PickAllBuses.yy",},},
     {"id":{"name":"Scr_SequenceFunctions","path":"scripts/Scr_SequenceFunctions/Scr_SequenceFunctions.yy",},},
+    {"id":{"name":"Sq_BossStage","path":"sequences/Sq_BossStage/Sq_BossStage.yy",},},
     {"id":{"name":"Sq_BreakTime","path":"sequences/Sq_BreakTime/Sq_BreakTime.yy",},},
     {"id":{"name":"Sq_GameOver","path":"sequences/Sq_GameOver/Sq_GameOver.yy",},},
     {"id":{"name":"Sq_GameResultsLose","path":"sequences/Sq_GameResultsLose/Sq_GameResultsLose.yy",},},

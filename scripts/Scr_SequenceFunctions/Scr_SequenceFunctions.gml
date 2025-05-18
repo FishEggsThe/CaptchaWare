@@ -26,12 +26,7 @@ function ChangeSequence(_key) {
 
 #region Break Time
 function BreakTime_0() {
-	with Obj_GameManager {
-		currRound++;
-		selectMicrogame = microgames[irandom(microgamesSize-1)];
-		//selectMicrogame = microgames[microgamesSize-1];
-		//selectMicrogame = microgames[1];
-	}
+	Obj_GameManager.currRound++;
 }
 function BreakTime_30() {
 	layer_destroy_instances("Game_Instances");
@@ -58,7 +53,14 @@ function GameResultsWin_60() {
 }
 function GameResultsWin_120() {
 	with Obj_GameManager {
-		DetermineRampUp();
+		SelectMicrogame();
+		if isOnBossStage {
+			isOnBossStage = false;
+			ResetDifficultyProgression();
+			ChangeSequence("LevelUp");
+		} else {
+			DetermineRampUp();
+		}
 	}
 }
 #endregion
@@ -73,6 +75,10 @@ function GameResultsLose_120() {
 		if playerLives <= 0 {
 			ChangeSequence("GameOver");
 		} else {
+			if !isOnBossStage
+				SelectMicrogame();
+			else
+				ResetDifficultyProgression();
 			DetermineRampUp();
 		}
 	}
@@ -90,22 +96,34 @@ function SpeedUp_180() {
 }
 #endregion
 
+#region Boss Stage
+function BossStage_0() {
+	with Obj_GameManager {
+		isOnBossStage = true;
+		SelectBossMicrogame();
+		ResetGameSpeed();
+	}
+}
+function BossStage_180() {
+	ChangeSequence("Break");
+}
+#endregion
+
 #region Level Up
 function LevelUp_0() {
 	Obj_GameManager.difficulty++;
+	ResetDifficultyProgression();
 	ResetGameSpeed()
 }
 function LevelUp_180() {
 	ChangeSequence("Break");
-	with Obj_GameManager {
-		//state = breakState;
-	}
 }
 #endregion
 
 #region Startup
 function Startup_30() {
 	//randomize();
+	SelectMicrogame();
 }
 function Startup_120() {
 	ChangeSequence("Break");
@@ -116,7 +134,7 @@ function Startup_120() {
 function GameOver_0() {
 	layer_destroy_instances("Game_Instances");
 	ResetGameSpeed();
-	gameOver = true;
+	Obj_GameManager.gameOver = true;
 }
 function GameOver_120() {
 	instance_create_layer(0, 0, "Instances", Obj_GameOverButtons);

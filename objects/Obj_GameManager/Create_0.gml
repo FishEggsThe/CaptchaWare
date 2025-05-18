@@ -23,6 +23,7 @@ setNextSpeedUp = 4;
 setNextBossStage = 12;
 nextSpeedUp = setNextSpeedUp;
 nextBossStage = setNextBossStage;
+isOnBossStage = false;
 
 #region Sequences here
 sequences = ds_map_create();
@@ -50,6 +51,12 @@ seqID = layer_sequence_create("Sequences", 0, 0, Sq_SpeedUp);
 seq = layer_sequence_get_instance(seqID);
 layer_sequence_pause(seqID)
 ds_map_add(sequences, "SpeedUp", new sequenceInfo(seqID, seq));
+
+// Boss Stage
+seqID = layer_sequence_create("Sequences", 0, 0, Sq_BossStage);
+seq = layer_sequence_get_instance(seqID);
+layer_sequence_pause(seqID)
+ds_map_add(sequences, "BossStage", new sequenceInfo(seqID, seq));
 
 // Level Up
 seqID = layer_sequence_create("Sequences", 0, 0, Sq_LevelUp);
