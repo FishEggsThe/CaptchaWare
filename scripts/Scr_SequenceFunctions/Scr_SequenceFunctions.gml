@@ -24,6 +24,23 @@ function ChangeSequence(_key) {
 	}
 }
 
+
+function DetermineRampUp() {
+	if !isOnBossStage {
+		nextSpeedUp--;
+		nextBossStage--;
+	}
+	
+	if (nextBossStage <= 0 && difficulty < 2) {
+		ChangeSequence("BossStage");
+	} else if (nextSpeedUp <= 0) {
+		nextSpeedUp = setNextSpeedUp;
+		ChangeSequence("SpeedUp");
+	} else {
+		ChangeSequence("Break");
+	}
+}
+
 #region Break Time
 function BreakTime_0() {
 	Obj_GameManager.currRound++;
@@ -56,7 +73,6 @@ function GameResultsWin_120() {
 		SelectMicrogame();
 		if isOnBossStage {
 			isOnBossStage = false;
-			ResetDifficultyProgression();
 			ChangeSequence("LevelUp");
 		} else {
 			DetermineRampUp();
@@ -77,8 +93,6 @@ function GameResultsLose_120() {
 		} else {
 			if !isOnBossStage
 				SelectMicrogame();
-			else
-				ResetDifficultyProgression();
 			DetermineRampUp();
 		}
 	}
@@ -100,6 +114,7 @@ function SpeedUp_180() {
 function BossStage_0() {
 	with Obj_GameManager {
 		isOnBossStage = true;
+		ResetDifficultyProgression();
 		SelectBossMicrogame();
 		ResetGameSpeed();
 	}

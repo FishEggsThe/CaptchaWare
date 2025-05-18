@@ -40,20 +40,6 @@ function CheckIfCanInteract() {
 	return true;
 }
 
-function DetermineRampUp() {
-	nextSpeedUp--;
-	nextBossStage--;
-	if (nextBossStage <= 0 && difficulty < 2) {
-		ResetDifficultyProgression();
-		ChangeSequence("BossStage");
-	} else if (nextSpeedUp <= 0) {
-		nextSpeedUp = setNextSpeedUp;
-		ChangeSequence("SpeedUp");
-	} else {
-		ChangeSequence("Break");
-	}
-}
-
 function ResetDifficultyProgression() {
 	with Obj_GameManager {
 		nextSpeedUp = setNextSpeedUp;
