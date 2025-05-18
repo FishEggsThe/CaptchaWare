@@ -86,6 +86,7 @@
     {"id":{"name":"Sq_Startup","path":"sequences/Sq_Startup/Sq_Startup.yy",},},
     {"id":{"name":"Shdr_CaptchaScreen","path":"shaders/Shdr_CaptchaScreen/Shdr_CaptchaScreen.yy",},},
     {"id":{"name":"chives","path":"sprites/chives/chives.yy",},},
+    {"id":{"name":"Spr_BombExplode","path":"sprites/Spr_BombExplode/Spr_BombExplode.yy",},},
     {"id":{"name":"Spr_Button","path":"sprites/Spr_Button/Spr_Button.yy",},},
     {"id":{"name":"Spr_CaptchaScreen","path":"sprites/Spr_CaptchaScreen/Spr_CaptchaScreen.yy",},},
     {"id":{"name":"Spr_Checkmark","path":"sprites/Spr_Checkmark/Spr_Checkmark.yy",},},
