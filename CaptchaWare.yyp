@@ -71,6 +71,7 @@
     {"id":{"name":"Rm_Game","path":"rooms/Rm_Game/Rm_Game.yy",},},
     {"id":{"name":"Rm_Menu","path":"rooms/Rm_Menu/Rm_Menu.yy",},},
     {"id":{"name":"Rm_Test","path":"rooms/Rm_Test/Rm_Test.yy",},},
+    {"id":{"name":"Scr_CaptchaScreen","path":"scripts/Scr_CaptchaScreen/Scr_CaptchaScreen.yy",},},
     {"id":{"name":"Scr_GameManager","path":"scripts/Scr_GameManager/Scr_GameManager.yy",},},
     {"id":{"name":"Scr_General","path":"scripts/Scr_General/Scr_General.yy",},},
     {"id":{"name":"Scr_PickAllBuses","path":"scripts/Scr_PickAllBuses/Scr_PickAllBuses.yy",},},

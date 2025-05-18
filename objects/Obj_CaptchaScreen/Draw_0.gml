@@ -1,3 +1,7 @@
+var gm = Obj_GameManager;
+if gm.inGameState
+	DrawTimer(Obj_GameManager.gameTimer);
+
 if size >= maxSize { exit; }
 
 DrawSprite(sprite, 0, x, y, maxSize, maxSize, 0, backgroundColor, 2-size);
@@ -8,7 +12,7 @@ DrawSprite(sprite, 0, x, y, maxSize, maxSize, 0, backgroundColor, 2-size);
 //DrawSprite(sprite, 0, x, y, maxSize, maxSize, 0, backgroundColor, 2-size);
 //shader_reset();
 
-var i, gm = Obj_GameManager, alpha = (2-size)*(0.5+!Obj_Debug.debug*0.5);
+var i, alpha = (2-size)*(0.5+!Obj_Debug.debug*0.5);
 for(i = 0; i < gm.playerLives; i++) {
 	DrawSprite(chives, 0, 32, 96+64*i, 1, 1, 0, c_white, alpha);
 }
