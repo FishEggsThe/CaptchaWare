@@ -31,7 +31,7 @@ function DetermineRampUp() {
 		nextBossStage--;
 	}
 	
-	if (nextBossStage <= 0 && difficulty < 2) {
+	if (nextBossStage <= 0) {
 		ChangeSequence("BossStage");
 	} else if (nextSpeedUp <= 0) {
 		nextSpeedUp = setNextSpeedUp;
@@ -72,8 +72,9 @@ function GameResultsWin_120() {
 	with Obj_GameManager {
 		SelectMicrogame();
 		if isOnBossStage {
+			if difficulty < 2 { ChangeSequence("LevelUp"); }
+			else { DetermineRampUp(); }
 			isOnBossStage = false;
-			ChangeSequence("LevelUp");
 		} else {
 			DetermineRampUp();
 		}
@@ -116,7 +117,7 @@ function BossStage_0() {
 		isOnBossStage = true;
 		ResetDifficultyProgression();
 		SelectBossMicrogame();
-		ResetGameSpeed();
+		if difficulty < 2 { ResetGameSpeed(); }
 	}
 }
 function BossStage_180() {
@@ -127,8 +128,8 @@ function BossStage_180() {
 #region Level Up
 function LevelUp_0() {
 	Obj_GameManager.difficulty++;
-	ResetDifficultyProgression();
-	ResetGameSpeed()
+	//ResetDifficultyProgression();
+	//if difficulty < 2 { ResetGameSpeed(); }
 }
 function LevelUp_180() {
 	ChangeSequence("Break");

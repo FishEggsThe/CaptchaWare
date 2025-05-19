@@ -12,15 +12,15 @@ holdList = array_create(holdSize, -1);
 availableIndexes = array_create_ext(microgamesSize-holdSize-1, function(_index) {return _index;});
 pickIndex = -1;
 
-difficulty = 0;
+difficulty = 2;
 playerLives = 4;
 currRound = 0;
 playerScore = 0;
 gameWon = false;
 gameOver = false;
 
-setNextSpeedUp = 4;
-setNextBossStage = 12;
+setNextSpeedUp = 1//4;
+setNextBossStage = 1//2;
 nextSpeedUp = setNextSpeedUp;
 nextBossStage = setNextBossStage;
 isOnBossStage = false;

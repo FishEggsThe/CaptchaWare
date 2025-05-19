@@ -6,10 +6,10 @@ function DrawTimer(time) {
 	
 	draw_set_color(c_blue);
 	
-	if unitLength == 0 {
+	if unitLength <= 0 {
 		DrawSprite(Spr_BombExplode, 0, xBomb, yBomb);
 	} else {
-		var bombThickness = 25, lineThickness = 10, 
+		var bombThickness = 20, lineThickness = 10, 
 			lineEnd = room_width-2*xBomb, 
 			segmentLength = lineEnd/unitLengthMax;
 		

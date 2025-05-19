@@ -1,6 +1,6 @@
 var gm = Obj_GameManager;
 if gm.inGameState
-	DrawTimer(Obj_GameManager.gameTimer);
+	DrawTimer(gm.gameTimer);
 
 if size >= maxSize { exit; }
 
