@@ -1,5 +1,4 @@
 !! Current Objectives:
-* Microgame timer
 * More microgames
 * Boss Stage microgames
 
@@ -18,6 +17,7 @@ Visual/Animation Related Future Objectives:
 * Smooth slide transition from main menu to game screen
 
 Finished Objectives (Latest to Earliest):
+* Microgame timer
 * Impove how a microgame is selected to consider boss microgames
 * Boss Stage sequence
 * Rework how difficulty and game speed are set within sequences
