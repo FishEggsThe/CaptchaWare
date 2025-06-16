@@ -46,7 +46,7 @@ global.migrogameList[index] = new microgame(create, time, popupText, controls); 
 	create = function(_difficulty) {
 		//instance_create_layer(0, 0, "Game_Instances", Obj_TileSpriteBank);
 		CreateTileGrid(Obj_TileSelect, 3+_difficulty, function(obj) {
-			obj.imageSprite = chives;
+			obj.imageSprite = Spr_Checkmark;
 			obj.isTrafficLight = true;
 		})
 	};

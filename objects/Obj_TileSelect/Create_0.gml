@@ -1,5 +1,5 @@
 event_inherited();
-imageSprite = Spr_Checkmark;
+imageSprite = chives;
 
 selected = false;
 isTrafficLight = false;

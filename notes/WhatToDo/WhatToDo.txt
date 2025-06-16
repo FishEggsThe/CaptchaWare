@@ -1,12 +1,11 @@
 !! Current Objectives:
-* More microgames
-	* Do the fourth microgame
+* Do the 5th microgame
 * Boss Stage microgames
+* High score list
 * Rewrite more code for no reason (it's fun)
 
 Future Objectives:
 * Refine how a microgame is selected
-* High score list
 
 Hard Maybe Objectives:
 * Save scores online through server
@@ -18,7 +17,10 @@ Visual/Animation Related Future Objectives:
 * Add distortion to type prompt microgame
 * Smooth slide transition from main menu to game screen
 
+------------------------------------------------------------------------
+
 Finished Objectives (Latest to Earliest):
+* Do the fourth microgame
 * Rework how the win condition is checked and change Microgame constructor to coincide with the change
 * Microgame timer
 * Impove how a microgame is selected to consider boss microgames
