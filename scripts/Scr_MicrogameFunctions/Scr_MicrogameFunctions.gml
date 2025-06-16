@@ -11,8 +11,8 @@ function CreateMicrogameList(_microgames) {
 
 function SelectMicrogame() {
 	with Obj_GameManager {
-		//selectMicrogame = microgames[irandom(microgamesSize-1)];
-		selectMicrogame = microgames[microgamesSize-1];
+		selectMicrogame = microgames[irandom(microgamesSize-1)];
+		//selectMicrogame = microgames[microgamesSize-1];
 		//selectMicrogame = microgames[1];
 	}
 }

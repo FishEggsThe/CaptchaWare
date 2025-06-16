@@ -26,7 +26,7 @@ function InitializeHighScores() {
 		repeat(5) {
 			p--;
 			var hs = InitializeScore(p, n);
-			array_insert(highScores, -1, hs);
+			array_push(highScores, hs);
 		}
 		numOfHighScores = array_length(highScores);
 	}
@@ -44,5 +44,15 @@ function AddScore(p, n) {
 		}
 		
 		numOfHighScores = array_length(highScores);
+	}
+}
+
+function DrawHighScores() {
+	var xPos = room_width/2, yInc = 1/(numOfHighScores+2),
+		display = "{0}: {1}";
+	for(var i = 0; i < numOfHighScores; i++) {
+		var n = highScores[i].name, p = highScores[i].points;
+		DrawText(xPos, room_height*yInc*(i+1), string(display, n, p), 
+				fa_center, fa_middle, c_white, 2, 2);
 	}
 }
