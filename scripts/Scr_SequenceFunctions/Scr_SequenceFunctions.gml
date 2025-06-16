@@ -89,8 +89,8 @@ function GameResultsLose_30() {
 	layer_destroy_instances("Game_Instances");
 }
 function GameResultsLose_60() {
-	Obj_GameManager.playerLives--;
-	//Obj_GameManager.playerLives-=4;
+	//Obj_GameManager.playerLives--;
+	Obj_GameManager.playerLives-=4;
 }
 function GameResultsLose_120() {
 	with Obj_GameManager {
@@ -166,6 +166,7 @@ function GameOver_0() {
 function GameOver_120() {
 	if !instance_exists(Obj_HighScoreManager)
 		instance_create_layer(0, 0, "Instances", Obj_HighScoreManager);
+	AddScore(Obj_GameManager.playerScore, Obj_Control.playerName);
 	Obj_HighScoreManager.showScores = true;
 	instance_create_layer(0, 0, "Instances", Obj_GameOverButtons);
 }
