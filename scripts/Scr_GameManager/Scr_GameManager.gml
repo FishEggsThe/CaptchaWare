@@ -19,9 +19,9 @@ function CreateMicrogameList(_microgames) {
 
 function SelectMicrogame() {
 	with Obj_GameManager {
-		selectMicrogame = microgames[irandom(microgamesSize-1)];
+		//selectMicrogame = microgames[irandom(microgamesSize-1)];
 		//selectMicrogame = microgames[microgamesSize-1];
-		//selectMicrogame = microgames[1];
+		selectMicrogame = microgames[1];
 	}
 }
 
@@ -95,6 +95,7 @@ global.migrogameList[index] = new microgame(create, time, popupText, controls); 
 
 #region Pick all Buses
 create = function(_difficulty) {
+	var tileList = ds_list_create();
 	instance_create_layer(0, 0, "Game_Instances", Obj_TileSpriteBank);
 	// Laying out tiles
 	// I hate whenever I have to do this
@@ -104,22 +105,23 @@ create = function(_difficulty) {
 	for(i = 0; i < dims; i++) {
 		for(j = 0; j < dims; j++) {
 			xPos = xOrigin+64*j*margin; yPos = yOrigin+64*i*margin;
-			instance_create_layer(xPos, yPos, "Game_Instances", Obj_TileDisappear);
+			var tile = instance_create_layer(xPos, yPos, "Game_Instances", Obj_TileDisappear);
+			ds_list_add(tileList, tile);
 		}
 	}
 	// Picking which tiles to be problem tiles
-	var indexList = array_create_ext(dims*dims, function(_index) {return _index;});
 	repeat(dims) {
-		var listPick = irandom(array_length(indexList)-1),
-			randI = indexList[listPick], 
-			tile = instance_find(Obj_TileDisappear, randI);
+		var randI = irandom(ds_list_size(tileList)-1),
+			tile = ds_list_find_value(tileList, randI);
 		with tile {
 			isBus = true;
 			maxRerolls = choose(1, 2);
 			GetNewTileSprite();
 		}
-		array_delete(indexList, listPick, 1);
+		ds_list_delete(tileList, randI);
 	}
+	ds_list_destroy(tileList);
+	tileList = -1;
 };
 time = 300; popupText = "Pick all Buses"; controls = [true, false];
 global.migrogameList[index] = new microgame(create, time, popupText, controls); index++;

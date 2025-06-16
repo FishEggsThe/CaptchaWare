@@ -1,19 +1,21 @@
 {
   "$GMObject":"",
-  "%Name":"Obj_ButtonManager",
+  "%Name":"Obj_TileSelect",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"Obj_ButtonManager",
+  "name":"Obj_TileSelect",
   "overriddenProperties":[],
   "parent":{
-    "name":"Buttons",
-    "path":"folders/Objects/Common Objects/Buttons.yy",
+    "name":"04 - Select All Traffic Lights",
+    "path":"folders/Objects/Microgame Objects/04 - Select All Traffic Lights.yy",
   },
-  "parentObjectId":null,
-  "persistent":true,
+  "parentObjectId":{
+    "name":"Obj_FancyButton",
+    "path":"objects/Obj_FancyButton/Obj_FancyButton.yy",
+  },
+  "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
   "physicsFriction":0.2,
@@ -30,7 +32,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"Spr_Button",
+    "path":"sprites/Spr_Button/Spr_Button.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

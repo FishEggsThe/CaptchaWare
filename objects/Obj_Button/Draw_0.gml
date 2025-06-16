@@ -1,0 +1,1 @@
+DrawSprite(sprite, 0, x, y, size, size, 0, color);

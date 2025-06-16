@@ -1,21 +1,8 @@
 event_inherited();
-isBus = false;
-maxRerolls = 0;
-
 imageSprite = Spr_Checkmark;
 
-notHovering = function() {
-	lerpToSize = 1;
-};
-
-hover = function() {
-	lerpToSize = 1.2;
-};
-
-check = function() {
-	lerpToSize = 0.7;
-	
-};
+isBus = false;
+maxRerolls = 0;
 
 checkReleased = function() {
 	maxRerolls--;
