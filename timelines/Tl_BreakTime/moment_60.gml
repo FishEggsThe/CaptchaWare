@@ -1,1 +1,0 @@
-with Obj_GameManager { selectMicrogame.createGame(difficulty); }
