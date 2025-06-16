@@ -1,7 +1,6 @@
 !! Current Objectives:
 * More microgames
 * Boss Stage microgames
-* Rework how the win condition is checked
 
 Future Objectives:
 * Refine how a microgame is selected
@@ -18,6 +17,7 @@ Visual/Animation Related Future Objectives:
 * Smooth slide transition from main menu to game screen
 
 Finished Objectives (Latest to Earliest):
+* Rework how the win condition is checked and change Microgame constructor to coincide with the change
 * Microgame timer
 * Impove how a microgame is selected to consider boss microgames
 * Boss Stage sequence

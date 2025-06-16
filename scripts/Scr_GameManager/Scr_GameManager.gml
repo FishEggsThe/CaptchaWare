@@ -1,6 +1,5 @@
-function microgame(_createGame, _winCondition, _time, _popupText, _controls) constructor {
+function microgame(_createGame, _time, _popupText, _controls) constructor {
 	createGame = _createGame;
-	winCondition = _winCondition;
 	time = _time;
 	popupText = _popupText;
 	controls = _controls;
@@ -90,13 +89,8 @@ create = function(_difficulty) {
 		checkbox = instance_create_layer(xPos, yPos, "Game_Instances", Obj_Checkbox);
 	checkbox.size = 2/(_difficulty+1);
 };
-win = function() {
-	if instance_exists(Obj_Checkbox)
-		return Obj_Checkbox.checked;
-	return false;
-};
 time = 240; popupText = "Check the Box"; controls = [true, false];
-global.migrogameList[index] = new microgame(create, win, time, popupText, controls); index++;
+global.migrogameList[index] = new microgame(create, time, popupText, controls); index++;
 #endregion
 
 #region Pick all Buses
@@ -127,15 +121,8 @@ create = function(_difficulty) {
 		array_delete(indexList, listPick, 1);
 	}
 };
-win = function() {
-	if instance_exists(Obj_TileDisappear) {
-		with Obj_TileDisappear { if isBus { return false; } }
-		return true;
-	}
-	return false;
-};
 time = 300; popupText = "Pick all Buses"; controls = [true, false];
-global.migrogameList[index] = new microgame(create, win, time, popupText, controls); index++;
+global.migrogameList[index] = new microgame(create, time, popupText, controls); index++;
 #endregion
 
 #region Type the Prompt
@@ -143,14 +130,8 @@ create = function(_difficulty) {
 	//160, 256
 	instance_create_layer(160, 256, "Game_Instances", Obj_TypePrompt);
 };
-win = function() {
-	if instance_exists(Obj_TypePrompt) {
-		with Obj_TypePrompt { if input == prompt { return true; } }
-	}
-	return false;
-};
 time = 360; popupText = "Type the Prompt"; controls = [false, true];
-global.migrogameList[index] = new microgame(create, win, time, popupText, controls); index++;
+global.migrogameList[index] = new microgame(create, time, popupText, controls); index++;
 #endregion
 
 // Microgame Template
