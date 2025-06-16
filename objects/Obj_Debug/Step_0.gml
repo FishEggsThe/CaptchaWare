@@ -16,3 +16,9 @@ for(var i = 1; i <= 3; i++) {
 	if keyboard_check_pressed(ord(string(i)))
 		SetGameSpeed(1 + (i-1)*0.5);
 }
+if keyboard_check_pressed(ord("4")) {
+	with Obj_GameManager {
+		var ltt = (livesToTake == 1 ? 4 : 1);
+		livesToTake = ltt;
+	}
+}

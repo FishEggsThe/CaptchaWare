@@ -89,8 +89,9 @@ function GameResultsLose_30() {
 	layer_destroy_instances("Game_Instances");
 }
 function GameResultsLose_60() {
-	//Obj_GameManager.playerLives--;
-	Obj_GameManager.playerLives-=4;
+	with Obj_GameManager {
+		playerLives-=livesToTake;
+	}
 }
 function GameResultsLose_120() {
 	with Obj_GameManager {

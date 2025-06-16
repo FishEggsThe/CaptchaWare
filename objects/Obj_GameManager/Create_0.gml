@@ -14,6 +14,7 @@ pickIndex = -1;
 
 difficulty = 0;
 playerLives = 4;
+livesToTake = 1;
 currRound = 0;
 playerScore = 0;
 gameWon = false;

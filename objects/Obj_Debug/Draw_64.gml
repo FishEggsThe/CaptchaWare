@@ -13,6 +13,7 @@ if instance_exists(Obj_GameManager) {
 	array_push(debugLog, "Sequence Timer: " + string(gm.currSequence.seq.headPosition));
 	array_push(debugLog, "Game Won: " + string(gm.gameWon));
 	array_push(debugLog, "Lives: " + string(gm.playerLives));
+	array_push(debugLog, "Lives lost on miss: " + string(gm.livesToTake));
 	array_push(debugLog, "Round: " + string(gm.currRound));
 	array_push(debugLog, "Score: " + string(gm.playerScore));
 	array_push(debugLog, "Is Sequence Running: " + string(gm.currSequence.seq.paused));
