@@ -7,7 +7,10 @@ notHovering = function() {
 };
 
 check = function() {
-	if !checked { color = c_gray; }
+	if !checked {
+		color = c_gray;
+		GameWon();
+	}
 };
 
 checkReleased = function() {

@@ -58,6 +58,10 @@ function ResetGame() {
 	}
 }
 
+function GameWon() {
+	with Obj_GameManager { gameWon = true; }
+}
+
 #region Game Speed
 global.gameSpeed = 1;
 function SetGameSpeed(_speed) {
