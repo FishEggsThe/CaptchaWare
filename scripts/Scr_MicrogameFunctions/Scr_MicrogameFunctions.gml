@@ -11,8 +11,8 @@ function CreateMicrogameList(_microgames) {
 
 function SelectMicrogame() {
 	with Obj_GameManager {
-		selectMicrogame = microgames[irandom(microgamesSize-1)];
-		//selectMicrogame = microgames[microgamesSize-1];
+		//selectMicrogame = microgames[irandom(microgamesSize-1)];
+		selectMicrogame = microgames[microgamesSize-1];
 		//selectMicrogame = microgames[1];
 	}
 }
@@ -21,6 +21,7 @@ function SelectBossMicrogame() {
 	SelectMicrogame(); // Temporary, add boss microgames!!!!!!
 }
 
+// Tile stuff
 function CreateTileGrid(object, size, setup){
 	var tileList = ds_list_create();
 	// Laying out tiles

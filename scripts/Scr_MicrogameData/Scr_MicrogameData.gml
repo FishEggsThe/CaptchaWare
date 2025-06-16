@@ -43,16 +43,15 @@ global.migrogameList[index] = new microgame(create, time, popupText, controls); 
 #endregion
 
 #region Select All Traffic Lights
-//create = function(_difficulty) {
-//	//instance_create_layer(0, 0, "Game_Instances", Obj_TileSpriteBank);
-//	CreateTileGrid(Obj_TileDisappear, 3+_difficulty, function(obj) {
-//		obj.isBus = true;
-//		obj.maxRerolls = choose(1, 2);
-//		obj.getNewTileSprite();
-//	})
-//};
-//time = 300; popupText = "Select All Traffic Lights"; controls = [true, false];
-//global.migrogameList[index] = new microgame(create, time, popupText, controls); index++;
+	create = function(_difficulty) {
+		//instance_create_layer(0, 0, "Game_Instances", Obj_TileSpriteBank);
+		CreateTileGrid(Obj_TileSelect, 3+_difficulty, function(obj) {
+			obj.imageSprite = chives;
+			obj.isTrafficLight = true;
+		})
+	};
+	time = 300; popupText = "Select All Traffic Lights"; controls = [true, false];
+	global.migrogameList[index] = new microgame(create, time, popupText, controls); index++;
 #endregion
 
 #region Microgame Template
