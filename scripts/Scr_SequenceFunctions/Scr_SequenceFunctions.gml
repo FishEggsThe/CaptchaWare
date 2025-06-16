@@ -46,7 +46,6 @@ function BreakTime_0() {
 	Obj_GameManager.currRound++;
 }
 function BreakTime_30() {
-	layer_destroy_instances("Game_Instances");
 	Obj_GameManager.showControls = true;
 }
 function BreakTime_60() {
@@ -65,6 +64,9 @@ function BreakTime_120() {
 #endregion
 
 #region Game Results (Win)
+function GameResultsWin_30() {
+	layer_destroy_instances("Game_Instances");
+}
 function GameResultsWin_60() {
 	Obj_GameManager.playerScore++;
 }
@@ -83,8 +85,12 @@ function GameResultsWin_120() {
 #endregion
 
 #region Game Results (Lose)
+function GameResultsLose_30() {
+	layer_destroy_instances("Game_Instances");
+}
 function GameResultsLose_60() {
 	Obj_GameManager.playerLives--;
+	//Obj_GameManager.playerLives-=4;
 }
 function GameResultsLose_120() {
 	with Obj_GameManager {
@@ -137,6 +143,11 @@ function LevelUp_180() {
 #endregion
 
 #region Startup
+function Startup_0() {
+	if !instance_exists(Obj_HighScoreManager)
+		instance_create_layer(0, 0, "Instances", Obj_HighScoreManager);
+	Obj_HighScoreManager.showScores = false;
+}
 function Startup_30() {
 	//randomize();
 	SelectMicrogame();
@@ -153,6 +164,9 @@ function GameOver_0() {
 	Obj_GameManager.gameOver = true;
 }
 function GameOver_120() {
+	if !instance_exists(Obj_HighScoreManager)
+		instance_create_layer(0, 0, "Instances", Obj_HighScoreManager);
+	Obj_HighScoreManager.showScores = true;
 	instance_create_layer(0, 0, "Instances", Obj_GameOverButtons);
 }
 #endregion
