@@ -2,6 +2,7 @@
 * More microgames
 	* Do the fourth microgame
 * Boss Stage microgames
+* Rewrite more code for no reason (it's fun)
 
 Future Objectives:
 * Refine how a microgame is selected

@@ -1,3 +1,26 @@
+function CreateMicrogameList(_microgames) {
+	with Obj_GameManager {
+		microgames = [];
+	
+		// Fill up Microgame list
+		var i = 0, numOfGames = array_length(_microgames);
+		for(i = numOfGames-1; i >= 0; i--)
+			microgames[i] = _microgames[i];
+	}
+}
+
+function SelectMicrogame() {
+	with Obj_GameManager {
+		selectMicrogame = microgames[irandom(microgamesSize-1)];
+		//selectMicrogame = microgames[microgamesSize-1];
+		//selectMicrogame = microgames[1];
+	}
+}
+
+function SelectBossMicrogame() {
+	SelectMicrogame(); // Temporary, add boss microgames!!!!!!
+}
+
 function CreateTileGrid(object, size, setup){
 	var tileList = ds_list_create();
 	// Laying out tiles
@@ -16,7 +39,6 @@ function CreateTileGrid(object, size, setup){
 	repeat(dims) {
 		var randI = irandom(ds_list_size(tileList)-1),
 			tile = ds_list_find_value(tileList, randI);
-			//show_message(tile.isBus);
 		with tile {
 			setup(id);
 		}
