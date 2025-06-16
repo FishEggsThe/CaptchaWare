@@ -1,5 +1,5 @@
-function GetNewTileSprite(){
-	var newSprite, bus = isBus;
+function GetNewTileSprite(tile){
+	var newSprite, bus = tile.isBus;
 	with Obj_TileSpriteBank {
 		if bus {
 			newSprite = buses[irandom(busesLength-1)];
@@ -10,5 +10,5 @@ function GetNewTileSprite(){
 				newSprite = nonBuses[irandom(nonBusesLength-1)];
 		}
 	}
-	imageSprite = newSprite;
+	tile.imageSprite = newSprite;
 }

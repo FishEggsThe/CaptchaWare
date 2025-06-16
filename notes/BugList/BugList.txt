@@ -1,7 +1,8 @@
 !! Current Bugs:
-- None right now :3
+- None right now, good job! :3
 
 Bugs Fixed as of January 9th (Latest to Earliest):
+* Figure out how to properly create grid with proper setup with a function
 * Fix boss stages not happening after max difficulty had been reached
 * Fix GameOver sequence starting for some reason
 * Figure out why Obj_Retry and Obj_GoBack won't spawn in timeline

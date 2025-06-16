@@ -1,5 +1,6 @@
 !! Current Objectives:
 * More microgames
+	* Do the fourth microgame
 * Boss Stage microgames
 
 Future Objectives:
