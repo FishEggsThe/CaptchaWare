@@ -26,4 +26,5 @@ checkReleased = function() {
 	
 	with Obj_TileDisappear { if isBus { return; } }
 	GameWon();
+	lerpToSize = 1;
 };

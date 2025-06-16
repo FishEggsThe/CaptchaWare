@@ -9,4 +9,5 @@ checkReleased = function() {
 	
 	with Obj_TileSelect { if isTrafficLight != selected { return; } }
 	GameWon();
+	lerpToSize = 1;
 };

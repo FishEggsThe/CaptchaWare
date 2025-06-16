@@ -9,11 +9,11 @@ notHovering = function() {
 check = function() {
 	if !checked {
 		color = c_gray;
-		GameWon();
 	}
 };
 
 checkReleased = function() {
 	checked = true;
 	color = c_white;
+	GameWon();
 };

@@ -1,4 +1,4 @@
-if !CheckIfCanInteract() || Obj_GameManager.gameWon { exit; }
+if !CheckIfCanInteract() { exit; }
 
 if input == prompt {
 	GameWon();

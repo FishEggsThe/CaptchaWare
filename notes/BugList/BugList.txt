@@ -1,5 +1,5 @@
 !! Current Bugs:
-- None right now, good job! :3
+* Make it so buttons can't be pressed when the game is won for the selecting buttons
 
 Bugs Fixed as of January 9th (Latest to Earliest):
 * Figure out how to properly create grid with proper setup with a function

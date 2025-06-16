@@ -1,7 +1,8 @@
 function CheckIfCanInteract() {
 	if instance_exists(Obj_GameManager) {
 		with Obj_GameManager {
-			if !(currentState == "Game" || currentState == "GameOver") { return false; }
+			if !(currentState == "Game" || currentState == "GameOver") || gameWon
+			{ return false; }
 		}
 	}
 	return true;
