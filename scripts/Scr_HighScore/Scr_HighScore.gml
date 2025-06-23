@@ -6,17 +6,13 @@ function InitializeScore(p, n) {
 	return s;
 }
 
-/*
-Since both arrays and structs are automatically 
-  collected by the garbage collector, I'm just 
-  gonna comment this out unless I want to use it
-*/
-//function CleanUpHighScores() {
-//	for(var i = 0; i < numOfHighScores; i++) {
-//	    delete highScores[i];
-//	}
-//  highScores = [];
-//}
+#region Technical Firebase Shizz
+function AddScoreFirebase(p, n) {
+	var doc = json_stringify(InitializeScore(p, n));
+	FirebaseFirestore(root).Set(doc);
+	show_message($"Adding {n}");
+}
+#endregion
 
 function InitializeHighScores() {
 	with Obj_HighScoreManager {
