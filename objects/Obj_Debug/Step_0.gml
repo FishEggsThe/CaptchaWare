@@ -22,3 +22,7 @@ if keyboard_check_pressed(ord("4")) {
 		livesToTake = ltt;
 	}
 }
+
+if keyboard_check_pressed(ord("P")) {
+	Obj_HighScoreManager.addScoreFirebase(100, "beepis")
+}
