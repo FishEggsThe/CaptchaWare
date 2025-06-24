@@ -2,6 +2,7 @@
 - Nothing right now, good job! :3
 
 Bugs Fixed as of January 9th (Latest to Earliest):
+* Online scores not updating once a new room is entered
 * Make it so buttons can't be pressed when the game is won for the selecting buttons
 * Figure out how to properly create grid with proper setup with a function
 * Fix boss stages not happening after max difficulty had been reached

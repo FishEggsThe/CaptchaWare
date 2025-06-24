@@ -1,10 +1,10 @@
 !! Current Objectives:
 * Do the 5th microgame
 * Boss Stage microgames
+* Make sure saving scores online is secure
 * Rewrite more code for no reason (it's fun)
 
 Future Objectives:
-* Save scores online through server
 * Refine how a microgame is selected
 
 Hard Maybe Objectives:
@@ -20,6 +20,7 @@ Visual/Animation Related Future Objectives:
 ------------------------------------------------------------------------
 
 Finished Objectives (Latest to Earliest):
+* Save scores online through server
 * High score list
 * Do the fourth microgame
 * Rework how the win condition is checked and change Microgame constructor to coincide with the change
