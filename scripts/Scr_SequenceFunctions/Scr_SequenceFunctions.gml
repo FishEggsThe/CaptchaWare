@@ -167,8 +167,11 @@ function GameOver_0() {
 function GameOver_120() {
 	if !instance_exists(Obj_HighScoreManager)
 		instance_create_layer(0, 0, "Instances", Obj_HighScoreManager);
-	AddScore(Obj_GameManager.playerScore, Obj_Control.playerName);
-	Obj_HighScoreManager.showScores = true;
+		
+	with Obj_HighScoreManager {
+		addScoreFirebase(Obj_GameManager.playerScore, Obj_Control.playerName);
+		showScores = true;
+	}
 	instance_create_layer(0, 0, "Instances", Obj_GameOverButtons);
 }
 #endregion
