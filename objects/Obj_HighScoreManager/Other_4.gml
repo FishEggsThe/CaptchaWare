@@ -1,1 +1,1 @@
-showScores = true;
+showScores = false;
